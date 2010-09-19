@@ -7,7 +7,4 @@ El Sistema Help desk (Mesa de Ayuda) es un conjunto de servicios, que de manera 
 
 = Información General =
 
-Brindar al usuario funcional atención eficaz y oportuna a sus necesidades de soporte.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Brindar al usuario funcional atención eficaz y oportuna a sus necesidades de soporte.  
