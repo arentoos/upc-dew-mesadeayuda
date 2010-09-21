@@ -2,44 +2,28 @@ package pe.edu.upc.dew.helpdesk.model;
 
 import java.util.ArrayList; 
 
-// <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-// #[regen=yes,id=DCE.DC867D14-5E81-8D3C-42A8-250625FC1BA8]
-// </editor-fold> 
+
 public class Cliente {
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.FFE0A884-5FB1-11C3-1312-4486EDFE6133]
-    // </editor-fold> 
-    private int codigo;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.CADF7137-0AB5-801C-D280-340D0404E659]
-    // </editor-fold> 
+    private int id_cliente;
+
+    private String codigo;
+
+    private String clave;
+
     private String nombre;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.91D64592-F64B-4922-4E7F-C15B7F6A16D4]
-    // </editor-fold> 
     private String area;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.5E3183DE-23F7-F558-DD23-01668D342954]
-    // </editor-fold> 
-    private int anexo;
+    private String anexo;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.E461D9E9-4C31-D9CA-7E17-17637F8273E0]
-    // </editor-fold> 
+    private String e_mail;
+
     private String cargo;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.8114D935-0C8B-C6CB-9B03-5C7CA67C18AA]
-    // </editor-fold> 
     private String jefe;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.5202543E-5A81-5BC8-7EBE-57C0BB46141A]
-    // </editor-fold> 
     private ArrayList<Ticket> tickets;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -51,14 +35,14 @@ public class Cliente {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.E68C7E76-D383-AABE-7058-223AC2E65C72]
     // </editor-fold> 
-    public int getAnexo () {
+    public String getAnexo () {
         return anexo;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.DEA53D81-9E4D-4F65-F77D-B04BEC9C29AA]
     // </editor-fold> 
-    public void setAnexo (int val) {
+    public void setAnexo (String val) {
         this.anexo = val;
     }
 
@@ -93,14 +77,14 @@ public class Cliente {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.9395BA68-39A5-E18C-11CB-E83B044BD1CE]
     // </editor-fold> 
-    public int getCodigo () {
+    public String getCodigo () {
         return codigo;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.E1492F11-6E1F-8533-4306-C162F8D2C0E2]
     // </editor-fold> 
-    public void setCodigo (int val) {
+    public void setCodigo (String val) {
         this.codigo = val;
     }
 
@@ -144,6 +128,48 @@ public class Cliente {
     // </editor-fold> 
     public void setTickets (ArrayList<Ticket> val) {
         this.tickets = val;
+    }
+
+    /**
+     * @return the id_cliente
+     */
+    public int getId_cliente() {
+        return id_cliente;
+    }
+
+    /**
+     * @param id_cliente the id_cliente to set
+     */
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
+    }
+
+    /**
+     * @return the clave
+     */
+    public String getClave() {
+        return clave;
+    }
+
+    /**
+     * @param clave the clave to set
+     */
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    /**
+     * @return the e_mail
+     */
+    public String getE_mail() {
+        return e_mail;
+    }
+
+    /**
+     * @param e_mail the e_mail to set
+     */
+    public void setE_mail(String e_mail) {
+        this.e_mail = e_mail;
     }
 
 }

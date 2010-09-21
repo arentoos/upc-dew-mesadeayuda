@@ -5,6 +5,11 @@ package pe.edu.upc.dew.helpdesk.model;
 // </editor-fold> 
 public class Comentario {
 
+        // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
+    // #[regen=yes,id=DCE.41A423A2-1696-063E-37C6-77C66195C206]
+    // </editor-fold>
+    private int id_comentario;
+
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.41A423A2-1696-063E-37C6-77C66195C206]
     // </editor-fold> 
@@ -47,6 +52,20 @@ public class Comentario {
     // </editor-fold> 
     public void setFechahora (String val) {
         this.fechahora = val;
+    }
+
+    /**
+     * @return the id_comentario
+     */
+    public int getId_comentario() {
+        return id_comentario;
+    }
+
+    /**
+     * @param id_comentario the id_comentario to set
+     */
+    public void setId_comentario(int id_comentario) {
+        this.id_comentario = id_comentario;
     }
 
 }

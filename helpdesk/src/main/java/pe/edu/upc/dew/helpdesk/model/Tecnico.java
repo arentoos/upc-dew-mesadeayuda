@@ -10,7 +10,18 @@ public class Tecnico {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.FD79B05E-410D-2EC7-B218-453C2450FC16]
     // </editor-fold> 
-    private int codigo;
+    private int id_tecnico;
+
+         // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
+    // #[regen=yes,id=DCE.FFE0A884-5FB1-11C3-1312-4486EDFE6133]
+    // </editor-fold>
+    private String codigo;
+
+     // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
+    // #[regen=yes,id=DCE.FFE0A884-5FB1-11C3-1312-4486EDFE6133]
+    // </editor-fold>
+    private String clave;
+
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.CDEE2160-CB08-1ACC-9DE8-EA29627079CB]
@@ -50,14 +61,14 @@ public class Tecnico {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.2105FC1D-EC69-1D51-5F1C-B151404757C1]
     // </editor-fold> 
-    public int getCodigo () {
+    public String getCodigo () {
         return codigo;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.AC69D656-12AF-7C50-656F-28BD26BB676C]
     // </editor-fold> 
-    public void setCodigo (int val) {
+    public void setCodigo (String val) {
         this.codigo = val;
     }
 
@@ -87,6 +98,34 @@ public class Tecnico {
     // </editor-fold> 
     public void setTicketsAsignados (ArrayList<Ticket> val) {
         this.ticketsAsignados = val;
+    }
+
+    /**
+     * @return the id_tecnico
+     */
+    public int getId_tecnico() {
+        return id_tecnico;
+    }
+
+    /**
+     * @param id_tecnico the id_tecnico to set
+     */
+    public void setId_tecnico(int id_tecnico) {
+        this.id_tecnico = id_tecnico;
+    }
+
+    /**
+     * @return the clave
+     */
+    public String getClave() {
+        return clave;
+    }
+
+    /**
+     * @param clave the clave to set
+     */
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
 }
