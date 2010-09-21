@@ -8,7 +8,7 @@ public class Encuesta {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.D5CBD58C-3923-83AE-17FE-42FCE1803EE5]
     // </editor-fold> 
-    private int codigo;
+    private int id_encuesta;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.FEC90557-2389-F0B0-1F33-CA3636BE6080]
@@ -26,20 +26,7 @@ public class Encuesta {
     public Encuesta () {
     }
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,regenBody=yes,id=DCE.606F32B7-B812-6343-9D01-56D6780AC110]
-    // </editor-fold> 
-    public int getCodigo () {
-        return codigo;
-    }
-
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,regenBody=yes,id=DCE.119707DD-608D-2A2B-9D12-D62FE3632EF4]
-    // </editor-fold> 
-    public void setCodigo (int val) {
-        this.codigo = val;
-    }
-
+   
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.122B4B1A-9C09-A7BC-9C8A-A40DA14EF33A]
     // </editor-fold> 
@@ -66,6 +53,20 @@ public class Encuesta {
     // </editor-fold> 
     public void setResultado (int val) {
         this.resultado = val;
+    }
+
+    /**
+     * @return the id_encuesta
+     */
+    public int getId_encuesta() {
+        return id_encuesta;
+    }
+
+    /**
+     * @param id_encuesta the id_encuesta to set
+     */
+    public void setId_encuesta(int id_encuesta) {
+        this.id_encuesta = id_encuesta;
     }
 
 }
