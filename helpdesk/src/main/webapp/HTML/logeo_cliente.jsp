@@ -70,12 +70,12 @@ Description: A two-column web design, best for your personal and business bloggi
 						              <tr>
 						                <td id="letrasTablas">Usuario</td>
 						                <td>&nbsp;</td>
-						                <td><input name="txtUsuario" type="text" disabled="disabled" id="txtUsuario" value="carlos@ayudate.com.pe" /></td>
+						                <td><input name="txtUsuario" type="text"  id="txtUsuario" value="carlos@ayudate.com.pe" /></td>
 					                  </tr>
 						              <tr>
 						                <td id="letrasTablas">Contraseña</td>
 						                <td>&nbsp;</td>
-						                <td><input name="txtPassword" type="password" disabled="disabled" id="txtPassword" value="123456" /></td>
+						                <td><input name="txtPassword" type="password"  id="txtPassword" value="123456" /></td>
 					                  </tr>
 					                </table>
 						            
@@ -83,7 +83,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="creaTicket.html" >
+						  <form id="form1" method="post" action="Login" >
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
@@ -92,7 +92,7 @@ Description: A two-column web design, best for your personal and business bloggi
 							            <tr>
 							              <td width="60"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Aceptar" onclick="creaTicket.html"/></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="cmdCancelar" type="submit" id="cmdCancelar" value="Cancelar" /></td>
+                                                                      <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" value="Cancelar" /></td>
 						                </tr>
 						              </table>
 							        
