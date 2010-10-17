@@ -57,6 +57,16 @@ public class Empleado {
     // </editor-fold> 
     private String tipoEmpleado;
 
+    private int nivelSoporte;
+
+    public int getNivelSoporte() {
+        return nivelSoporte;
+    }
+
+    public void setNivelSoporte(int nivelSoporte) {
+        this.nivelSoporte = nivelSoporte;
+    }
+
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,id=DCE.5202543E-5A81-5BC8-7EBE-57C0BB46141A]
     // </editor-fold> 
