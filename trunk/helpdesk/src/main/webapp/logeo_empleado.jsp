@@ -91,7 +91,7 @@ Description: A two-column web design, best for your personal and business bloggi
 							        <blockquote>
 							    <table width="200" border="1">
 							            <tr>
-							              <td width="60"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Aceptar" onclick="creaTicket.html"/></td>
+							              <td width="60"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Aceptar" /></td>
 							              <td width="52">&nbsp;</td>
                                                                       <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" value="Cancelar" /></td>
 						                </tr>
