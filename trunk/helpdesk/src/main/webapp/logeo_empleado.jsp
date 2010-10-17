@@ -20,6 +20,7 @@ Description: A two-column web design, best for your personal and business bloggi
 <link href="default.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+     <center>
 <!-- start header -->
 <div id="header">
 	<div id="logo">
@@ -56,9 +57,10 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 						<blockquote>
 						  <blockquote>
-						    <h2 class="title">Ingreso al sistema</h2>
+                                                
+						    <h2 class="title">Ingreso al Sistema de Helpdesk</h2>
 						    <p class="meta">&nbsp;</p>
-					      </blockquote>
+                                                       </blockquote>
 					  </blockquote>
 					  <div class="entry">
 					    <blockquote>
@@ -66,7 +68,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						        <blockquote>
 						          <blockquote>
 						            <p>&nbsp;</p>
-                    <form id="form1" method="post" action="Login" >
+                                                         <form id="form1" method="post" action="Login" >
 						            <table width="200" border="1">
 						              <tr>
 						                <td id="letrasTablas">Usuario</td>
@@ -91,12 +93,13 @@ Description: A two-column web design, best for your personal and business bloggi
 							        <blockquote>
 							    <table width="200" border="1">
 							            <tr>
-							              <td width="60"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Ingresar" /></td>
+							              <td width="66"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Ingresar" /></td>
 							              <td width="52">&nbsp;</td>
-                                                                      <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" value="Limpiar" /></td>
+                                                                      <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" onclick='clearValues();' value="Limpiar" /></td>
 						                </tr>
 						              </table>
-                            </form>
+                                                       </form>
+                                                    </center>
 
 							        
                                       <p>Ejemplo:</p>
@@ -131,7 +134,7 @@ Description: A two-column web design, best for your personal and business bloggi
 				<div id="sidebar">
 					<ul>
 						<li id="categories">
-							<h2>Opciones de Tickets</h2>
+							<!--<h2>Opciones de Tickets</h2>
 							<ul>
 								<li><a href="#">Crear Tickets(0) </a></li>
 								<li><a href="#">Mis tickets creados </a>(0) </li>
@@ -141,6 +144,7 @@ Description: A two-column web design, best for your personal and business bloggi
 							</ul>
 						</li>
 						<li>
+
 							<h2>documentacion de ayuda</h2>
 							<ul>
 								<li><a href="#">Introducción</a></li>

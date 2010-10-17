@@ -208,14 +208,15 @@ Description: A two-column web design, best for your personal and business bloggi
 				<div id="sidebar">
 					<ul>
 					  <li id="categories">
-						<h2>Opciones de Tickets</h2>
-						  <ul>
+						<!--<h2>Opciones de Tickets</h2>
+						 // <ul>
 							  <li><a href="#">Crear Tickets(1) </a></li>
 							  <li><a href="DetalleTicket_cliente.html">Mis tickets creados </a>(1) </li>
 							  <li><a href="#">Mis tickets cerrados </a> (1) </li>
 							  <li><a href="Encuesta.html">Encuesta(1) </a></li>
 							  <li></li>
 						  </ul>
+      --->
 					  </li>
 						<li>
 							<h2>documentacion de ayuda</h2>
