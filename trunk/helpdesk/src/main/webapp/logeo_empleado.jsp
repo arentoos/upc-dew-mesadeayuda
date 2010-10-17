@@ -66,16 +66,17 @@ Description: A two-column web design, best for your personal and business bloggi
 						        <blockquote>
 						          <blockquote>
 						            <p>&nbsp;</p>
+                    <form id="form1" method="post" action="Login" >
 						            <table width="200" border="1">
 						              <tr>
 						                <td id="letrasTablas">Usuario</td>
 						                <td>&nbsp;</td>
-						                <td><input name="txtUsuario" type="text"  id="txtUsuario" value="carlos@ayudate.com.pe" /></td>
+						                <td><input name="login" type="text"  id="txtUsuario" value="" /></td>
 					                  </tr>
 						              <tr>
 						                <td id="letrasTablas">Contraseña</td>
 						                <td>&nbsp;</td>
-						                <td><input name="txtPassword" type="password"  id="txtPassword" value="123456" /></td>
+						                <td><input name="clave" type="password"  id="txtPassword" value="" /></td>
 					                  </tr>
 					                </table>
 						            
@@ -83,7 +84,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Login" >
+						  
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
@@ -95,6 +96,8 @@ Description: A two-column web design, best for your personal and business bloggi
                                                                       <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" value="Cancelar" /></td>
 						                </tr>
 						              </table>
+                            </form>
+
 							        
                                       <p>Ejemplo:</p>
                                       <table  width="314" border="1" cellpadding="0" cellspacing="0" >
@@ -113,7 +116,6 @@ Description: A two-column web design, best for your personal and business bloggi
 					          </blockquote>
 							    <p>&nbsp;</p>
 						    </blockquote>
-					      </form>
 						  <p>&nbsp;</p>
 				      </div>
 					</div>

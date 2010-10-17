@@ -130,8 +130,8 @@ public class Empleado {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.543E8B40-7ED8-8FC0-582E-E40D8E1076EC]
     // </editor-fold> 
-    public void setClave (String val) {
-        this.clave = val;
+    public void setClave (String clave) {
+        this.clave = clave;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
@@ -186,8 +186,8 @@ public class Empleado {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.D7AB6A02-0333-5995-5980-05CE4D0A5A7A]
     // </editor-fold> 
-    public void setLogin (String val) {
-        this.login = val;
+    public void setLogin (String login) {
+        this.login = login;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
