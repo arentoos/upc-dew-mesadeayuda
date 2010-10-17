@@ -20,8 +20,7 @@ Description: A two-column web design, best for your personal and business bloggi
 <link href="default.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-     <center>
-<!-- start header -->
+   <!-- start header -->
 <div id="header">
 	<div id="logo">
 		<h1>Ayudate.com</h1>
@@ -57,8 +56,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 						<blockquote>
 						  <blockquote>
-                                                
-						    <h2 class="title">Ingreso al Sistema de Helpdesk</h2>
+                                                <h2 class="title">Ingreso al Sistema de Helpdesk</h2>
 						    <p class="meta">&nbsp;</p>
                                                        </blockquote>
 					  </blockquote>
@@ -99,9 +97,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                </tr>
 						              </table>
                                                        </form>
-                                                    </center>
-
-							        
+                                                    							        
                                       <p>Ejemplo:</p>
                                       <table  width="314" border="1" cellpadding="0" cellspacing="0" >
 							            <tr>
