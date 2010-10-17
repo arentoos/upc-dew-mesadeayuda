@@ -5,7 +5,7 @@ Design by Free CSS Templates
 http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
 
-Title      : Undertaking 
+Title      : Undertaking
 Version    : 1.0
 Released   : 2010821
 Description: A two-column web design, best for your personal and business blogging.
@@ -68,8 +68,8 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL USUARIO</strong></td>
 				                  </tr>
 						              <tr>
-						                <td width="48" align="right" id="letrasTablas">Usuario:</td>
-						                <td width="144"><form id="form2" method="post" action="">
+						                <td width="100" align="right" id="letrasTablas">Usuario:</td>
+						                <td width="200"><form id="form2" method="post" action="">
 						                  <p>
 						                    <input name="txtusu" type="text" disabled="disabled" id="txtusu" value="Yenny Valenzuela" />
 					                      </p>
@@ -87,7 +87,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form4" method="post" action="">
 						                  <p>						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
-						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="Jefatura Norte" />
+						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="Jefatura Ventas Presenciales" />
 					                      </p>
 					                    </form></td>
 						                <td align="right" id="letrasTablas">Anexo:</td>
@@ -110,7 +110,7 @@ Description: A two-column web design, best for your personal and business bloggi
                                           <td bgcolor="#B60044"> <strong class="meta">Informacion del Ticket</strong></td>
                                      </tr>
                                     </table></span></div>
-                                   
+
 <table width="391" border="1" align="center" cellpadding="0" cellspacing="0">
 						              <tr>
 						                <td  width="90" align="right" id="letrasTablas"> Asunto:</td>
@@ -131,7 +131,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <p>
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria" id="listCategoria">
-						                      <option value="0">Soporte Tecnològico</option>
+						                      <option value="0">Soporte Tecnológico</option>
 						                      <option value="1">Desarrollo de Software</option>
 						                      <option value="2">Redes y Comunicaciones</option>
                                             </select>
@@ -146,6 +146,8 @@ Description: A two-column web design, best for your personal and business bloggi
 						                    <select name="listCategoria2" id="listCategoria">
 						                      <option value="1">Hardware</option>
 						                      <option value="2">Software</option>
+                                                                      <option value="3">Plataforma </option>
+
 					                        </select>
 					                      </p>
 					                    </form></td>
@@ -155,7 +157,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form9" method="post" action="">
 						                  <p>
 						                    <label for="txtdescripcion"></label>
-                                            <textarea name="txtdescripcion" disabled="disabled" id="txtdescripcion">Instalacion de un Programa</textarea>
+                                            <textarea name="txtdescripcion" id="txtdescripcion"></textarea>
 						                  </p>
 					                    </form></td>
 		                </tr>
@@ -169,7 +171,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 		                </tr>
 				                </table>
-						            
+
 				          </blockquote>
 			            </blockquote>
 				          </blockquote>
