@@ -64,7 +64,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 				    <blockquote>
 						  <blockquote>
-						    <h2 class="title">Bandeja de Tickets</h2>
+						    <h2 class="title">Bandeja de Tickets del Cliente</h2>
 </blockquote>
 					  </blockquote>
 					  <div class="entry">
@@ -75,18 +75,10 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" >&nbsp;</td>
 				                  </tr>
 						              <tr>
-						                <td width="171" align="right" id="letrasTablas">Tipo de solicitud:</td>
-						                <td width="267"><form id="form2" method="post" action="">
-						                  <p>
-						                    <label for="listTipo"></label>
-						                    <select name="listArea2" id="listArea2">
-						                      <option value="0" selected="selected">Todos</option>
-					                          <option value="1">Incidencias/Averias</option>
-					                          <option value="2">Requerimiento</option>
-					                          <option value="3">Consultas</option>
-				                            </select>
-						                  </p>
-					                    </form></td>
+						                
+                                                                  <p>
+                                                                  </p>
+					                    
 					                  </tr>
 						              <tr>
 						                <td height="26" align="right"  id="letrasTablas">Cliente:</td>
@@ -99,11 +91,11 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form> --> </td>
 					                  </tr>
 						              <tr>
-						                <td colspan="2" align="center" id="letrasTablas2"><form id="form12" method="post" action="">
-						                  <p>
-						                    <input type="submit" name="cmdActualizar" id="cmdActualizar" value="Actualizar" />
+						                <td colspan="2" align="center" id="letrasTablas2">
+                                                               <p>
+                                                           
 					                      </p>
-					                    </form></td>
+					                    </td>
 				                  </tr>
 				                </table>
                                                                         <div><span id="lineaSepara"><table width="480" border="1" align="center" cellpadding="0" cellspacing="0">
