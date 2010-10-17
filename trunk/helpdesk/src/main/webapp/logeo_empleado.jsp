@@ -28,22 +28,21 @@ Description: A two-column web design, best for your personal and business bloggi
 	</div>
 	<div id="menu">
 	  <ul>
-	    <li class="current_page_item"></li>
-	    <li><a href="#"><span>inicio</span></a></li>
+	    <li><a href="index.html"><span>inicio</span></a></li>
 	    <li><a href="#"><span>ayuda</span></a></li>
 	    <li></li>
 	    <li><a href="#"><span>Links</span></a></li>
 	    <li><a href="#"><span>Contact</span></a></li>
       </ul>
 		<ul>
-	    <li class="current_page_item"></li>
+		  <li class="current_page_item"></li>
 			<li></li>
 			<li></li>
 			<li></li>
 			<li></li>
 			<li></li>
-		</ul>
-	</div>
+	  </ul>
+  </div>
 </div>
 <hr />
 <!-- end header -->
@@ -57,7 +56,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 						<blockquote>
 						  <blockquote>
-						    <h2 class="title">Bienvenido al sistema</h2>
+						    <h2 class="title">Ingreso al sistema</h2>
 						    <p class="meta">&nbsp;</p>
 					      </blockquote>
 					  </blockquote>
@@ -67,16 +66,16 @@ Description: A two-column web design, best for your personal and business bloggi
 						        <blockquote>
 						          <blockquote>
 						            <p>&nbsp;</p>
-						            <table width="200" border="0">
+						            <table width="200" border="1">
 						              <tr>
-						                <td id="letrasTablas">Cliente</td>
+						                <td id="letrasTablas">Usuario</td>
 						                <td>&nbsp;</td>
-						                <td><a href="logeo_cliente.html">Ingresar como Cliente</a></td>
+						                <td><input name="txtUsuario" type="text"  id="txtUsuario" value="carlos@ayudate.com.pe" /></td>
 					                  </tr>
 						              <tr>
-						                <td id="letrasTablas">Tecnico</td>
+						                <td id="letrasTablas">Contraseña</td>
 						                <td>&nbsp;</td>
-						                <td><a href="logeo_tecnico.html">Ingresar como Tecnico</a></td>
+						                <td><input name="txtPassword" type="password"  id="txtPassword" value="123456" /></td>
 					                  </tr>
 					                </table>
 						            
@@ -84,13 +83,31 @@ Description: A two-column web design, best for your personal and business bloggi
 					            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="creaTicket.html" >
+						  <form id="form1" method="post" action="Login" >
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
 							        <blockquote>
-							          <p>&nbsp;</p>
-                                      <p>&nbsp;</p>
+							    <table width="200" border="1">
+							            <tr>
+							              <td width="60"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Aceptar" onclick="creaTicket.html"/></td>
+							              <td width="52">&nbsp;</td>
+                                                                      <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" value="Cancelar" /></td>
+						                </tr>
+						              </table>
+							        
+                                      <p>Ejemplo:</p>
+                                      <table  width="314" border="1" cellpadding="0" cellspacing="0" >
+							            <tr>
+							              <td width="44">cliente:</td>
+							              <td width="89">carlos@ayudate.com.pe </td>
+							              <td width="19">&nbsp;</td>
+							              <td width="19">contraseña:</td>
+							              <td width="20">123456</td>
+						                </tr>
+							         
+						              </table>
+<p>&nbsp;</p>
 						            </blockquote>
 						          </blockquote>
 					          </blockquote>
