@@ -89,13 +89,14 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 					                  </tr>
 						              <tr>
-						                <td height="26" align="right"  id="letrasTablas">&nbsp;</td>
-						                <td><form id="form4" method="post" action="">
+						                <td height="26" align="right"  id="letrasTablas">Cliente:</td>
+						                <td>${empleado.nombre}
+                                                                    <!-- <form id="form4" method="post" action="">
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
 						                  </p>
-					                    </form></td>
+					                    </form> --> </td>
 					                  </tr>
 						              <tr>
 						                <td colspan="2" align="center" id="letrasTablas2"><form id="form12" method="post" action="">
@@ -209,7 +210,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <li id="categories">
 						<h2>Opciones de Tickets</h2>
 						  <ul>
-							  <li><a href="#">Mis tickets asignados </a>(4) </li>
+							  <li><a href="creaTicket.jsp">Mis tickets asignados </a>(4) </li>
 							  <li><a href="#">Tckets pendientes del grupo</a> (1) </li>
 							  <li><a href="#">Tickets cerrados del grupo(4) </a></li>
 							  <li></li>

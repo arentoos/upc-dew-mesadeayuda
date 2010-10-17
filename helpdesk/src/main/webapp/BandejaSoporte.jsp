@@ -89,7 +89,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 					                  </tr>
 						              <tr>
-						                <td height="26" align="right"  id="letrasTablas">&nbsp;</td>
+						                <td height="26" align="right"  id="letrasTablas">${empleado.nombre}</td>
 						                <td><form id="form4" method="post" action="">
 						                  <p>
 						                    <label for="listArea"></label>
