@@ -71,22 +71,21 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td width="48" align="right" id="letrasTablas">Usuario:</td>
 						                <td width="144"><form id="form2" method="post" action="">
 						                  <p>
-						                    <input name="txtusu" type="text" disabled="disabled" id="txtusu" value="Carlos Zegarra" />
+						                    <input name="txtusu" type="text" disabled="disabled" id="txtusu" value="Yenny Valenzuela" />
 					                      </p>
 					                    </form></td>
 						                <td width="47" align="right" id="letrasTablas">Email:</td>
 						                <td width="144"><form id="form3" method="post" action="">
 						                  <p>
 						                    <label for="txtEmail"></label>
-						                    <input name="txtEmail" type="text" id="txtEmail" value="carlos@ayudate.com" />
+						                    <input name="txtEmail" type="text" id="txtEmail" value="yenny44@ayudate.com" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
 						              <tr>
 						                <td height="26" align="right"  id="letrasTablas">Area:</td>
 						                <td><form id="form4" method="post" action="">
-						                  <p>
-						                    <label for="listArea"></label>
+						                  <p>						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
 						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="Jefatura Norte" />
 					                      </p>

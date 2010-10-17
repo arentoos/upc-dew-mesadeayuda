@@ -24,7 +24,7 @@ public class EmpleadoServiceImpl implements EmpleadoService {
             empleado.setNombre("Yenny Valenzuela");
             empleado.setLogin(login);
             empleado.setAnexo("1234");
-            empleado.setCargo("Secretaria de Presidencia");
+            empleado.setCargo("Secretaria de Gerencia");
             empleado.setEmail("yenny44@ayudate.com");
         }
         else {
