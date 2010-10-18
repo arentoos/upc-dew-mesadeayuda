@@ -156,8 +156,8 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td align="right" id="letrasTablas">Descripciòn:</td>
 						                <td><form id="form9" method="post" action="">
 						                  <p>
-						                    <label for="txtdescripcion"></label>
-                                            <textarea name="txtdescripcion" id="txtdescripcion"></textarea>
+                                                                      <label  for="txtdescripcion"> </label>
+                                                                      <textarea cols="50" rows="6" name="txtdescripcion" id="txtdescripcion"></textarea>
 						                  </p>
 					                    </form></td>
 		                </tr>

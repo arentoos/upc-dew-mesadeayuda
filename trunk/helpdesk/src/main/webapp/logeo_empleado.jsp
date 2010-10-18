@@ -53,7 +53,7 @@ Description: A two-column web design, best for your personal and business bloggi
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<p class="date">set<b>22</b></p>
+						<p class="date">Oct<b>19</b></p>
 						<blockquote>
 						  <blockquote>
                                                 <h2 class="title">Ingreso al Sistema de Helpdesk</h2>
@@ -71,12 +71,12 @@ Description: A two-column web design, best for your personal and business bloggi
 						              <tr>
 						                <td id="letrasTablas">Usuario</td>
 						                <td>&nbsp;</td>
-						                <td><input name="login" type="text"  id="txtUsuario" value="" /></td>
+						                <td><input name="login" type="text" id="txtUsuario" value="" /></td>
 					                  </tr>
 						              <tr>
 						                <td id="letrasTablas">Contraseña</td>
 						                <td>&nbsp;</td>
-						                <td><input name="clave" type="password"  id="txtPassword" value="" /></td>
+						                <td><input name="clave" type="password" id="txtPassword" value="" /></td>
 					                  </tr>
 					                </table>
 						            
@@ -91,8 +91,8 @@ Description: A two-column web design, best for your personal and business bloggi
 							        <blockquote>
 							    <table width="200" border="0">
 							            <tr>
-							              <td width="66"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Ingresar a Sesion" /></td>
-							              <td width="52">&nbsp;</td>
+							              <td width="66"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Iniciar Sesion" /></td>
+							              <td width="30">&nbsp;</td>
                                                                       <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" onclick='clearValues();' value="Limpiar" /></td>
 						                </tr>
 						              </table>
