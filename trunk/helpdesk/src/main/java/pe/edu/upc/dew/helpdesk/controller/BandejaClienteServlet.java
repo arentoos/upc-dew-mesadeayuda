@@ -31,7 +31,7 @@ public class BandejaClienteServlet extends HttpServlet {
         // Llamar al model
         BandejaClienteService vBandejaService = new BandejaClienteServiceImpl();
 
-        Ticket vTicket = vBandejaService.ObtenerTicket(1001);
+        Ticket vTicket = vBandejaService.ObtenerTicket("1001");
 
         // Setear el model para el view
         request.setAttribute("ticket", vTicket);

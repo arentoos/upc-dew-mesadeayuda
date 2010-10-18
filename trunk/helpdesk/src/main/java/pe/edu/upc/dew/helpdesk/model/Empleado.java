@@ -7,54 +7,26 @@ import java.util.ArrayList;
 // </editor-fold> 
 public class Empleado {
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.FFE0A884-5FB1-11C3-1312-4486EDFE6133]
-    // </editor-fold> 
+  
     private int idEmpleado;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.CADF7137-0AB5-801C-D280-340D0404E659]
-    // </editor-fold> 
     private String login;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.91D64592-F64B-4922-4E7F-C15B7F6A16D4]
-    // </editor-fold> 
     private String area;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.5E3183DE-23F7-F558-DD23-01668D342954]
-    // </editor-fold> 
+
     private String anexo;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.E461D9E9-4C31-D9CA-7E17-17637F8273E0]
-    // </editor-fold> 
     private String cargo;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.8114D935-0C8B-C6CB-9B03-5C7CA67C18AA]
-    // </editor-fold> 
     private String jefe;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.E362163B-E25E-37D7-0720-DE1A4FFF5A45]
-    // </editor-fold> 
     private String clave;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.1412721C-BEC3-8F0A-7FB2-2D3BDDB86205]
-    // </editor-fold> 
     private String nombre;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.26B06CF7-670B-215E-A7C4-9998AC44164F]
-    // </editor-fold> 
     private String email;
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,id=DCE.34C118F5-6E3E-DCD4-C48E-E96C00C4AEAB]
-    // </editor-fold> 
     private String tipoEmpleado;
 
     private int nivelSoporte;
@@ -76,6 +48,7 @@ public class Empleado {
     // #[regen=yes,id=DCE.6DC85107-9B28-65AC-7E30-C08EF8130BFD]
     // </editor-fold> 
     public Empleado () {
+
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
