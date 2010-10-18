@@ -4,19 +4,6 @@
     Author     : cgonzagah
 --%>
 
-
-<!--
-
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Title      : Undertaking
-Version    : 1.0
-Released   : 2010821
-Description: A two-column web design, best for your personal and business blogging.
-
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -59,103 +46,14 @@ Description: A two-column web design, best for your personal and business bloggi
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<p class="date">Oct<b>18</b></p>
+						<p class="date">Oct<b>19</b></p>
 						<blockquote>
 						  <blockquote>
-                                                <h1>Fue Creado satisfactoriamente, la solicitud enviada !!!</h1>
+                                                <h1>El ticket fue Creado satisfactoriamente!!!</h1>
 						    <p class="meta">&nbsp;</p>
                                                        </blockquote>
 					  </blockquote>			
-					   <!-- <blockquote>
-						      <blockquote>
-						        <blockquote>
-						          <blockquote>
-						            <p>&nbsp;</p>
-                                                         <form id="form1" method="post" action="Login" >
-						            <table width="200" border="1">
-						              <tr>
-						                <td id="letrasTablas">Usuario</td>
-						                <td>&nbsp;</td>
-						                <td><input name="login" type="text"  id="txtUsuario" value="" /></td>
-					                  </tr>
-						              <tr>
-						                <td id="letrasTablas">Contraseña</td>
-						                <td>&nbsp;</td>
-						                <td><input name="clave" type="password"  id="txtPassword" value="" /></td>
-					                  </tr>
-					                </table>
-
-						          </blockquote>
-					            </blockquote>
-				          </blockquote>
-				        </blockquote>
-
-						 <!--<blockquote>
-                                                       	    <blockquote>
-							      <blockquote>
-							        <blockquote>
-							    <table width="200" border="0">
-							            <tr>
-							              <td width="66"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Ingresar" /></td>
-							              <td width="60">&nbsp;</td>
-                                                                      <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" onclick='clearValues();' value="Limpiar" /></td>
-						                </tr>
-						              </table>
-                                                       </form>
-
-                                                            <div class="entry"></div>
-
-
-
-                                      <p>Ejemplo:</p>
-
-
-
-
-                                      <table  width="314" border="0" cellpadding="0" cellspacing="0" >
-							            <tr>
-							              <td width="44">cliente:</td>
-							              <td width="89">carlos@ayudate.com.pe </td>
-							              <td width="19">&nbsp;</td>
-							              <td width="19">contraseña:</td>
-							              <td width="20">123456</td>
-						                </tr>
-
-						              </table>
-<p>&nbsp;</p>
-						            </blockquote>
-						          </blockquote>
-					          </blockquote>
-							    <p>&nbsp;</p>
-						    </blockquote>
-						  <p>&nbsp;</p>
-				      </div>
-					</div>
-					<div class="post">
-						<p class="hr1">&nbsp;</p>
-						<h2 class="title"><br />
-					    </h2>
-					</div>
-					<div class="post">
-					  <div class="entry"> </div>
-					</div>
-				</div>
-				<div id="sidebar">
-					<ul>
-						<li id="categories">
-							<!--<h2>Opciones de Tickets</h2>
-							<ul>
-								<li><a href="#">Crear Tickets(0) </a></li>
-								<li><a href="#">Mis tickets creados </a>(0) </li>
-								<li><a href="#">Mis tickets cerrados </a> (0) </li>
-								<li></li>
-								<li></li>
-							</ul>
-						</li>
-						<li>
-<!-- end page -->
-<!-- start footer -->
-
+					 
 							
 							</div>							</div>
 			</div>
