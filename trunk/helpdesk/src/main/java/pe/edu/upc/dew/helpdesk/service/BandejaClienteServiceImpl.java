@@ -12,20 +12,24 @@ import pe.edu.upc.dew.helpdesk.model.Ticket;
  */
 public class BandejaClienteServiceImpl implements BandejaClienteService {
 
+
+
     public Ticket ObtenerTicket(String idTicket) {
 
-        Ticket vTicket = null;
+       Ticket vTicket = null;
 
-        if (idTicket.equals("1001") == true) {
+     //   vTicket.setEstado("Pendiente");
+    //   vTicket.setIdTicket("1001");
 
             vTicket = new Ticket("1001", "Instalacion de software", "Software", "15/10/2010 09:30", "Ninguno", "Soporte Tenologico", "Requerimiento", "", new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0));
-        }
-        else if (idTicket.equals("1002") == true){
-
+      
             vTicket = new Ticket("1002", "Problema de acceso a la red", "Hardware", "17/10/2010 12:30", "En progreso", "Redes y Comunicaciones", "Incidencias/Averias", "", new Empleado(1, "cristina", "Marketing", "5678", "Creativa", "", "5454", "Cristina Gonzaga", "cgonzaga@ayudate.com", "C", 0));
-        }
 
-        return vTicket;
+            return vTicket;
+    }
+
+
+       
 
     }
-}
+

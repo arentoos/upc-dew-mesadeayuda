@@ -142,6 +142,9 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <tr>
 						                    <td id="letrasTablas3">Descripcion Breve:</td>
 						                    <td colspan="3" id="letrasTablas4">${ticket.descripcion}</td>
+					                      </tr> <tr>
+						                    <td id="letrasTablas3">Historial:</td>
+						                    <td colspan="3" id="letrasTablas4">-</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Comentarios</td>

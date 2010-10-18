@@ -37,16 +37,16 @@ public class LoginServlet extends HttpServlet {
         req.setAttribute("idSession", vSesion.getId());
 
         if (empleado.getLogin().equals("yenny") == true) {
+
             // Seleccionar la siguiente vista, flujo de navegacion
             req.getRequestDispatcher("BandejaCliente.jsp").forward(req, resp);
-
-            vSesion.setAttribute("objCliente", empleado);
+            //vSesion.setAttribute("objCliente", empleado);
         }
         else if (empleado.getLogin().equals("carlos") == true) {
 
             req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
 
-            vSesion.setAttribute("objSoporte", empleado);
+            //vSesion.setAttribute("objSoporte", empleado);
         }
         else {
             PrintWriter out = resp.getWriter();

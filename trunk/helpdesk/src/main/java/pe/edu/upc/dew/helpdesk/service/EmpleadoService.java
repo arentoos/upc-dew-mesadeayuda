@@ -13,7 +13,7 @@ import pe.edu.upc.dew.helpdesk.model.Empleado;
  */
 public interface EmpleadoService {
 
-     public Empleado logeo(String email, String clave);
+     public Empleado logeo(String login, String clave);
 
 
 
