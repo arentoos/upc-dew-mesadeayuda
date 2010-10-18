@@ -63,7 +63,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
-						        <table width="393" border="1" cellpadding="0" cellspacing="0" class="post">
+						        <table width="500" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL USUARIO</strong></td>
 				                  </tr>
@@ -105,16 +105,16 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td>&nbsp;</td>
 					                  </tr>
 				                </table>
-                                                                        <div><span id="lineaSepara"><table width="394" border="1" align="center" cellpadding="0" cellspacing="0">
+                                                                        <div><span id="lineaSepara"><table width="500" border="1" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
                                           <td bgcolor="#B60044"> <strong class="meta">Informacion del Ticket</strong></td>
                                      </tr>
                                     </table></span></div>
 
-<table width="391" border="1" align="center" cellpadding="0" cellspacing="0">
+<table width="500" border="1" align="center" cellpadding="0" cellspacing="0">
 						              <tr>
 						                <td  width="90" align="right" id="letrasTablas"> Asunto:</td>
-						                <td width="285"><form id="form6" method="post" action="">
+						                <td width="500"><form id="form6" method="post" action="">
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <select name="listArea" id="listArea">
@@ -162,13 +162,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 		                </tr>
 						              <tr>
-						                <td align="right" id="letrasTablas">Fecha:</td>
-						                <td><form id="form10" method="post" action="">
-						                  <p>
-						                    <label for="txtFecha"></label>
-						                    <input name="txtFecha" type="text" disabled="disabled" id="txtFecha" value="07/09/2010" />
-					                      </p>
-					                    </form></td>
+						         
 		                </tr>
 				                </table>
 
