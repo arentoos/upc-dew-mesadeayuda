@@ -57,7 +57,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 				    <blockquote>
 						  <blockquote>
-						    <h2 class="title">Detalle de Ticket del Cleinte</h2>
+						    <h2 class="title">Detalle de Ticket del Cliente</h2>
 </blockquote>
 					  </blockquote>
 					  <div class="entry">
@@ -73,7 +73,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <p>
 						                    <label for="listTipo"></label>
 						                    <label for="txtnom"></label>
-						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="Carlos zegarra Perez" />
+						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="" />
 						                  </p>
 					                    </form></td>
 					                  </tr>
@@ -83,7 +83,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
-						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="carlos@ayudate.com.pe" />
+						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -92,7 +92,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form3" method="post" action="">
 						                  <p>
 						                    <label for="txtini"></label>
-						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="#655166" />
+						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="" />
 					                      </p>
 					                    </form></td>
 				                  </tr>
@@ -101,7 +101,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form5" method="post" action="">
 						                  <p>
 						                    <label for="txtfin"></label>
-						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="Jefatura Norte" />
+						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -117,31 +117,31 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr>
 						                  <tr>
 						                    <td width="65" id="letrasTablas3">Ticket:</td>
-						                    <td width="404" colspan="3" id="letrasTablas4">#1001</td>
+						                    <td width="404" colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Fecha de Creación:</td>
-						                    <td colspan="3" id="letrasTablas4">21/09/2010 , 11:51 am</td>
+						                    <td colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Area de Atención:</td>
-						                    <td colspan="3" id="letrasTablas4">Jefatura de Ventas Presenciales</td>
+						                    <td colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Tipo de Solicitud:</td>
-						                    <td colspan="3" id="letrasTablas4">Soporte Tecnológico</td>
+						                    <td colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Categoria:</td>
-						                    <td colspan="3" id="letrasTablas4">Software</td>
+						                    <td colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ultima Actualización:</td>
-						                    <td colspan="3" id="letrasTablas4">N/A</td>
+						                    <td colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Descripcion Breve:</td>
-						                    <td colspan="3" id="letrasTablas4">Instalación de un Programa</td>
+						                    <td colspan="3" id="letrasTablas4"></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Comentarios</td>
