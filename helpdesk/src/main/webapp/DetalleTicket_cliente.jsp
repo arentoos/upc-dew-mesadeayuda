@@ -57,7 +57,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 				    <blockquote>
 						  <blockquote>
-						    <h2 class="title">Detalle de Tickets</h2>
+						    <h2 class="title">Detalle de Ticket del Cleinte</h2>
 </blockquote>
 					  </blockquote>
 					  <div class="entry">
@@ -65,7 +65,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						      <blockquote>
 						        <table width="481" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
-						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL USUARIO</strong></td>
+						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>INFORMACION DEL USUARIO</strong></td>
 				                  </tr>
 						              <tr>
 						                <td width="162" align="right" id="letrasTablas">Nombre completo</td>
@@ -120,23 +120,23 @@ Description: A two-column web design, best for your personal and business bloggi
 						                    <td width="404" colspan="3" id="letrasTablas4">#1001</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Fecha Actualizacion:</td>
+						                    <td id="letrasTablas3">Fecha de Creación:</td>
 						                    <td colspan="3" id="letrasTablas4">21/09/2010 , 11:51 am</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Area:</td>
+						                    <td id="letrasTablas3">Area de Atención:</td>
 						                    <td colspan="3" id="letrasTablas4">Jefatura de Ventas Presenciales</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Tipo(Ticket):</td>
-						                    <td colspan="3" id="letrasTablas4">Soporte TEcnologico</td>
+						                    <td id="letrasTablas3">Tipo de Solicitud:</td>
+						                    <td colspan="3" id="letrasTablas4">Soporte Tecnológico</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Categoria:</td>
 						                    <td colspan="3" id="letrasTablas4">Software</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Fecha de Solucion:</td>
+						                    <td id="letrasTablas3">Ultima Actualización:</td>
 						                    <td colspan="3" id="letrasTablas4">N/A</td>
 					                      </tr>
 						                  <tr>
@@ -144,7 +144,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                    <td colspan="3" id="letrasTablas4">Instalación de un Programa</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Actualizar</td>
+						                    <td id="letrasTablas3">Comentarios</td>
 						                    <td colspan="3"><form id="form9" method="post" action="">
 						                      <p>
 						                        <label for="txtDescrip"></label>
@@ -167,9 +167,9 @@ Description: A two-column web design, best for your personal and business bloggi
 							        <blockquote>
 							        							          <table width="200" border="0" align="center">
 							            <tr>
-							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Actualizar Ticket" /></td>
+							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Grabar Ticket" /></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Cancelar" /></td>
+							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Regresar" /></td>
 						                </tr>
 						              </table>
 							        </blockquote>

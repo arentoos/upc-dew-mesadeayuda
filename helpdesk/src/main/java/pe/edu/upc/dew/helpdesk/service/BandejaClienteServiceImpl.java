@@ -30,7 +30,7 @@ public class BandejaClienteServiceImpl implements BandejaClienteService {
 
             vTicket.setCategoria("Hardware");
             vTicket.setDescripcion("login");
-            vTicket.setEstado("1234");
+            vTicket.setEstado("Pendiente");
             vTicket.setFechaCreacion("15/09/2010");
             vTicket.setFechaCierre("19/09/2010");
             vTicket.setTipoSolicitud("Requerimientos");
