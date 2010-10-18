@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 
@@ -11,6 +13,7 @@ Released   : 2010821
 Description: A two-column web design, best for your personal and business blogging.
 
 -->
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -180,7 +183,18 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </table></td>
 		                </tr>
 				                </table>
-						            
+<table border="2">
+    <c:forEach var="ticket" items="${empleado.tickets}">
+
+        <tr>
+
+            <td> ${ticket.idTicket}</td>
+            <td> ${ticket.descripcion}<br/></td>
+        </tr>
+
+    </c:forEach>
+
+ </table>
 				          </blockquote>
 			            </blockquote>
 				          </blockquote>

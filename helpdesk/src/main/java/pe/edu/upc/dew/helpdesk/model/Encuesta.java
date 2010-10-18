@@ -8,7 +8,7 @@ public class Encuesta {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
     // #[regen=yes,id=DCE.D5CBD58C-3923-83AE-17FE-42FCE1803EE5]
     // </editor-fold>
-    private int idEncuesta;
+    private String idEncuesta;
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
     // #[regen=yes,id=DCE.FEC90557-2389-F0B0-1F33-CA3636BE6080]
@@ -72,14 +72,14 @@ public class Encuesta {
     // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
     // #[regen=yes,regenBody=yes,id=DCE.606F32B7-B812-6343-9D01-56D6780AC110]
     // </editor-fold>
-    public int getIdEncuesta () {
+    public String getIdEncuesta () {
         return idEncuesta;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker ">
     // #[regen=yes,regenBody=yes,id=DCE.119707DD-608D-2A2B-9D12-D62FE3632EF4]
     // </editor-fold>
-    public void setIdEncuesta (int val) {
+    public void setIdEncuesta (String val) {
         this.idEncuesta = val;
     }
 

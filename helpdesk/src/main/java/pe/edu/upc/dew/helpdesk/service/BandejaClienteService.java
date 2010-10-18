@@ -5,6 +5,7 @@
 
 package pe.edu.upc.dew.helpdesk.service;
 
+import pe.edu.upc.dew.helpdesk.model.Empleado;
 import pe.edu.upc.dew.helpdesk.model.Ticket;
 
 /**
@@ -14,5 +15,5 @@ import pe.edu.upc.dew.helpdesk.model.Ticket;
 public interface BandejaClienteService {
 
     public Ticket ObtenerTicket(String idTicket);
-
+    //public Empleado ObtenerTicketEmpleado(String login);
 }

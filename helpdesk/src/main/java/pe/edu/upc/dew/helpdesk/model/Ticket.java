@@ -13,12 +13,28 @@ public class Ticket {
     private String tipoSolicitud;
     private String fechaCierre;
     private Encuesta encuesta;
-    private ArrayList<Comentario> comentarios;
     private Empleado tecnico;
     private Empleado cliente;
+    private ArrayList<Comentario> comentarios;
+
+    public Ticket(String idTicket, String descripcion, String categoria, String fechaCreacion, String estado, String areaReportar, String tipoSolicitud, String fechaCierre, Encuesta encuesta, String comentarios, Empleado tecnico) {
+        this.idTicket = idTicket;
+        this.descripcion = descripcion;
+        this.categoria = categoria;
+        this.fechaCreacion = fechaCreacion;
+        this.estado = estado;
+        this.areaReportar = areaReportar;
+        this.tipoSolicitud = tipoSolicitud;
+        this.fechaCierre = fechaCierre;
+        this.cliente = cliente;
+        this.comentarios = new ArrayList<Comentario>();
+
+
+    }
 
     public Ticket(String idTicket, String descripcion, String categoria, String fechaCreacion, String estado, String areaReportar, String tipoSolicitud, String fechaCierre, Empleado cliente) {
 
+   
         this.idTicket = idTicket;
         this.descripcion = descripcion;
         this.categoria = categoria;
@@ -30,7 +46,15 @@ public class Ticket {
         this.cliente = cliente;
 
         this.comentarios = new ArrayList<Comentario>();
+
     }
+
+
+
+
+
+
+   
 
     public Empleado getCliente() {
         return cliente;
@@ -41,6 +65,7 @@ public class Ticket {
     }
 
     public String getAreaReportar() {
+
         return areaReportar;
     }
 
@@ -56,15 +81,21 @@ public class Ticket {
         this.categoria = categoria;
     }
 
+
     public ArrayList<Comentario> getComentarios() {
+
         return comentarios;
     }
 
+
     public void setComentarios(ArrayList<Comentario> val) {
         this.comentarios = val;
+
     }
 
+
     public String getDescripcion() {
+
         return descripcion;
     }
 

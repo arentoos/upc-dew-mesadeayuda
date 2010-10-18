@@ -46,6 +46,21 @@ public class Empleado {
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+
+    // #[regen=yes,id=DCE.5202543E-5A81-5BC8-7EBE-57C0BB46141A]
+    // </editor-fold> 
+  
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,id=DCE.6DC85107-9B28-65AC-7E30-C08EF8130BFD]
+    // </editor-fold> 
+    public Empleado () {
+        this.tickets= new ArrayList<Ticket>();
+
+    }
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+
     // #[regen=yes,regenBody=yes,id=DCE.E68C7E76-D383-AABE-7058-223AC2E65C72]
     // </editor-fold> 
     public String getAnexo() {
@@ -115,17 +130,24 @@ public class Empleado {
         this.email = val;
     }
 
-    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
-    // #[regen=yes,regenBody=yes,id=DCE.9395BA68-39A5-E18C-11CB-E83B044BD1CE]
-    // </editor-fold> 
     public int getIdEmpleado() {
         return idEmpleado;
     }
 
     // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
+    // #[regen=yes,regenBody=yes,id=DCE.9395BA68-39A5-E18C-11CB-E83B044BD1CE]
+    // </editor-fold> 
+
+    
+
+    // <editor-fold defaultstate="collapsed" desc=" UML Marker "> 
     // #[regen=yes,regenBody=yes,id=DCE.E1492F11-6E1F-8533-4306-C162F8D2C0E2]
     // </editor-fold> 
+
+   
+
     public void setIdEmpleado(int val) {
+
         this.idEmpleado = val;
     }
 
