@@ -120,7 +120,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <tr id="letrasTablas3">
 						                    <td>1001</td>
 						                    <td>Incidencias</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Raul Villanueva</a></td>
+						                    <td><a href="BandejaCliente">Raul Villanueva</a></td>
 						                    <td>Instacion de programa</td>
 						                    <td>Carlos Zegarra</td>
 						                    <td>07/09/2010</td>

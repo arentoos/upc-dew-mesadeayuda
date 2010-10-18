@@ -11,6 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pe.edu.upc.dew.helpdesk.model.Ticket;
+import pe.edu.upc.dew.helpdesk.service.BandejaClienteService;
+import pe.edu.upc.dew.helpdesk.service.BandejaClienteServiceImpl;
 
 /**
  *
@@ -23,21 +26,19 @@ public class BandejaClienteServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
 
+        // aqui deberia obtener el numero de ticket
+
         // Llamar al model
-//        EmpleadoService empleadoService = new EmpleadoServiceImpl();
-//
-//        Empleado empleado = empleadoService.logeo(login, clave);
-//
-//        // Setear el model para el view
-//        req.setAttribute("empleado", empleado);
-//        req.setAttribute("idSession", vSesion.getId());
-//
-//        if (empleado.getLogin().equals("yenny") == true) {
-//            // Seleccionar la siguiente vista, flujo de navegacion
-//            req.getRequestDispatcher("BandejaCliente.jsp").forward(req, resp);
-//
-//            vSesion.setAttribute("objCliente", empleado);
-//        }
+        BandejaClienteService vBandejaService = new BandejaClienteServiceImpl();
+
+        Ticket vTicket = vBandejaService.ObtenerTicket(1001);
+
+        // Setear el model para el view
+        request.setAttribute("ticket", vTicket);
+
+        request.getRequestDispatcher("BandejaCliente.jsp").forward(request, response);
+
+//        vSesion.setAttribute("objCliente", empleado);
     } 
 
     @Override
