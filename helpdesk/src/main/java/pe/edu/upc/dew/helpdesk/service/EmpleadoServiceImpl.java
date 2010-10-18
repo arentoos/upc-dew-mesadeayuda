@@ -19,26 +19,11 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 
         if (login.equals("yenny") == true) {
 
-            empleado = new Empleado();
-
-            empleado.setNombre("Yenny Valenzuela");
-            empleado.setLogin(login);
-            empleado.setAnexo("1234");
-            empleado.setCargo("Secretaria de Gerencia");
-            empleado.setEmail("yenny44@ayudate.com");
+            empleado = new Empleado(1001, login, "Finanzas", "1234", "Secretaria de Gerencia", "", "1234", "Yenny Valenzuela Leguia", "yenny44@ayudate.com", "C", 0);
         }
         else {
-            empleado = new Empleado();
-
-            empleado.setNombre("Carlos Zegarra");
-            empleado.setLogin(login);
-            empleado.setAnexo("9876");
-            empleado.setCargo("Desarrollador");
-            empleado.setEmail("czegarra@ayudate.com");
+            empleado = new Empleado(1002, login, "Marketing", "9876", "Creativa", "", "9876", "Cristina Gonzaga", "cgonzaga@ayudate.com", "C", 0);
         }
-
-        //usuario.getRoles().add(new Rol("admin","Administrador"));
-       // usuario.getRoles().add(new Rol("operador","Operador"));
 
         return empleado;
     }
