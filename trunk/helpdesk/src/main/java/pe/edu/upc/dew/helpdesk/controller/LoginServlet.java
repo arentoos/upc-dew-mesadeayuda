@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
         else {
             PrintWriter out = resp.getWriter();
 
-            out.println("El usuario " + login + "no esta registrado");
+            out.println("El usuario " + login + " no esta registrado");
         }
 
     }
