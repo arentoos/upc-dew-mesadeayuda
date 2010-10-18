@@ -67,7 +67,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						          <blockquote>
 						            <p>&nbsp;</p>
                                                          <form id="form1" method="post" action="Login" >
-						            <table width="200" border="1">
+						            <table width="200" border="0">
 						              <tr>
 						                <td id="letrasTablas">Usuario</td>
 						                <td>&nbsp;</td>
@@ -89,7 +89,7 @@ Description: A two-column web design, best for your personal and business bloggi
 							    <blockquote>
 							      <blockquote>
 							        <blockquote>
-							    <table width="200" border="1">
+							    <table width="200" border="0">
 							            <tr>
 							              <td width="66"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Ingresar" /></td>
 							              <td width="52">&nbsp;</td>
@@ -98,17 +98,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						              </table>
                                                        </form>
                                                     							        
-                                      <p>Ejemplo:</p>
-                                      <table  width="314" border="1" cellpadding="0" cellspacing="0" >
-							            <tr>
-							              <td width="44">cliente:</td>
-							              <td width="89">carlos@ayudate.com.pe </td>
-							              <td width="19">&nbsp;</td>
-							              <td width="19">contraseña:</td>
-							              <td width="20">123456</td>
-						                </tr>
-							         
-						              </table>
+                                 
 <p>&nbsp;</p>
 						            </blockquote>
 						          </blockquote>
@@ -127,29 +117,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <div class="entry"> </div>
 					</div>
 				</div>
-				<div id="sidebar">
-					<ul>
-						<li id="categories">
-							<!--<h2>Opciones de Tickets</h2>
-							<ul>
-								<li><a href="#">Crear Tickets(0) </a></li>
-								<li><a href="#">Mis tickets creados </a>(0) </li>
-								<li><a href="#">Mis tickets cerrados </a> (0) </li>
-								<li></li>
-								<li></li>
-							</ul>
-						</li>
-						<li>
-
-							<h2>documentacion de ayuda</h2>
-							<ul>
-								<li><a href="#">Introducción</a></li>
-								<li><a href="#">Caracteristicas</a></li>
-								<li></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+				
 			</div>
 		</div>
 	</div>

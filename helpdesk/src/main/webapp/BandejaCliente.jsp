@@ -62,7 +62,7 @@ Description: A two-column web design, best for your personal and business bloggi
 				<div id="content">
 					<div class="post">
 						<p class="date">set<b>22</b></p>
-				    <blockquote>
+                                                  <blockquote>
 						  <blockquote>
 						    <h2 class="title">Bandeja de Tickets del Cliente</h2>
 </blockquote>
@@ -202,9 +202,9 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <li id="categories">
 						<h2>Opciones de Tickets</h2>
 						  <ul>
-							  <li><a href="creaTicket.jsp"> Crear Ticket </a>(4) </li>
-							  <li><a href="#">Tckets pendientes del grupo</a> (1) </li>
-							  <li><a href="#">Tickets cerrados del grupo(4) </a></li>
+							  <li><a href="creaTicket.jsp"> Crear Ticket </a></li>
+							  <li><a href="#">Mis Tickets Creados</a> (1) </li>
+							  <li><a href="#">Mis Tickets Cerrados </a></li>
 							  <li></li>
 						  </ul>
 					  </li>

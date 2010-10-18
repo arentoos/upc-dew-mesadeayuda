@@ -13,6 +13,6 @@ import pe.edu.upc.dew.helpdesk.model.Ticket;
  */
 public interface BandejaClienteService {
 
-    public Ticket ObtenerTicket(int idTicket);
+    public Ticket ObtenerTicket(String idTicket);
 
 }
