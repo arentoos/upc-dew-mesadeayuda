@@ -68,22 +68,22 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>INFORMACION DEL USUARIO</strong></td>
 				                  </tr>
 						              <tr>
-						                <td width="162" align="right" id="letrasTablas">Nombre completo</td>
+						                <td width="162" align="right" id="letrasTablas">Nombre completo:</td>
 						                <td width="248"><form id="form2" method="post" action="">
 						                  <p>
 						                    <label for="listTipo"></label>
 						                    <label for="txtnom"></label>
-						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="" />
+						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="${ticket.cliente.nombre}" />
 						                  </p>
 					                    </form></td>
 					                  </tr>
 						              <tr>
-						                <td height="26" align="right"  id="letrasTablas">Email</td>
+						                <td height="26" align="right"  id="letrasTablas">Email:</td>
 						                <td><form id="form4" method="post" action="">
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
-						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="" />
+						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="${ticket.cliente.email}" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -92,7 +92,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form3" method="post" action="">
 						                  <p>
 						                    <label for="txtini"></label>
-						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="" />
+						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="${ticket.cliente.anexo}" />
 					                      </p>
 					                    </form></td>
 				                  </tr>
@@ -101,7 +101,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form5" method="post" action="">
 						                  <p>
 						                    <label for="txtfin"></label>
-						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="" />
+						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="${ticket.cliente.area}" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -117,31 +117,31 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr>
 						                  <tr>
 						                    <td width="65" id="letrasTablas3">Ticket:</td>
-						                    <td width="404" colspan="3" id="letrasTablas4"></td>
+						                    <td width="404" colspan="3" id="letrasTablas4">${ticket.idTicket}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Fecha de Creación:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.fechaCreacion}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Area de Atención:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.areaReportar}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Tipo de Solicitud:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.tipoSolicitud}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Categoria:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.categoria}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ultima Actualización:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.fechaCierre}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Descripcion Breve:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.descripcion}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Comentarios</td>
