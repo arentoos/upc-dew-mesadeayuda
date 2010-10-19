@@ -73,7 +73,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <p>
 						                    <label for="listTipo"></label>
 						                    <label for="txtnom"></label>
-						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="" />
+						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="${ticket.cliente.nombre}" />
 						                  </p>
 					                    </form></td>
 					                  </tr>
@@ -83,7 +83,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
-						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="" />
+						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="${ticket.cliente.email}" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -92,7 +92,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form3" method="post" action="">
 						                  <p>
 						                    <label for="txtini"></label>
-						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="" />
+						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="${ticket.cliente.anexo}" />
 					                      </p>
 					                    </form></td>
 				                  </tr>
@@ -101,7 +101,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form5" method="post" action="">
 						                  <p>
 						                    <label for="txtfin"></label>
-						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="" />
+						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="${ticket.cliente.area}" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -124,7 +124,8 @@ Description: A two-column web design, best for your personal and business bloggi
 				                            <p>
 						                          <label for="cmd_soporte"></label>
 						                          <select name="cmd_soporte" id="cmd_soporte">
-						                            <option value="0" selected="selected">Soporte Tecnologico</option>
+						                            <option value="0" selected="selected">${ticket.areaReportar}</option>
+                                                                            <option value="1">Soporte Tecnologico</option>
 						                            <option value="1">Desarrollo de Software</option>
 						                            <option value="2">Redes y Comunicaciones</option>
 	                                        </select>
@@ -134,7 +135,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                    <td width="144" align="center" id="letrasTablas2"><form id="form7" method="post" action="">
 						                      <p>
 						                        <label for="txtSoporte"></label>
-						                        <input name="txtSoporte" type="text" disabled="disabled" id="txtSoporte" value="" />
+						                        <input name="txtSoporte" type="text" disabled="disabled" id="txtSoporte" value="${ticket.tecnico.nombre}" />
 					                          </p>
 					                        </form></td>
 					                      </tr>
@@ -144,7 +145,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                      <p>
 						                        <label for="cmdEstado"></label>
 						                        <select name="cmdEstado" id="cmdEstado">
-						                          <option value="0" selected="selected">Ninguno</option>
+						                          <option value="0" selected="selected">${ticket.estado}</option>
 						                          <option value="1">En progreso</option>
 						                          <option value="2">Esperando respuesta</option>
 						                          <option value="3">Cerrado</option>
@@ -159,11 +160,11 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ticket:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.idTicket}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Fecha Creacion:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.fechaCreacion}</td>
 					                      </tr>
                                                               <!--    <tr>
 						                    <td id="letrasTablas3">Area:</td>
@@ -171,19 +172,19 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr> -->
 						                  <tr>
 						                    <td id="letrasTablas3">Tipo Solicitud:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.tipoSolicitud}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Categoria:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">>${ticket.categoria}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ultima actualizacion:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.fechaCierre}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Descripcion Breve:</td>
-						                    <td colspan="3" id="letrasTablas4"></td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.descripcion}</td>
 					                      </tr>
                                                               <tr>
 						                    <td id="letrasTablas3">Historial:</td>
@@ -206,7 +207,7 @@ Description: A two-column web design, best for your personal and business bloggi
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="login">
+						  <form id="form1" method="post" action="Login">
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>

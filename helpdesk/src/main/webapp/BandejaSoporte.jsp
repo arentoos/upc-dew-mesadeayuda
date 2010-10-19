@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 
@@ -64,7 +66,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<p class="date">set<b>22</b></p>
 				    <blockquote>
 						  <blockquote>
-						    <h2 class="title">Bandeja de Tickets</h2>
+						    <h2 class="title">Bandeja de Tickets de Soporte</h2>
 </blockquote>
 					  </blockquote>
 					  <div class="entry">
@@ -89,8 +91,14 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 					                  </tr>
 						              <tr>
-						                <td height="26" align="right"  id="letrasTablas">Persona de Soporte</td>
-                                                                <td height="26" align="left"  id="letrasTablas">${empleado.nombre}</td>
+						                <td height="26" align="right"  id="letrasTablas">Analista:</td>
+						                <td>${empleado.nombre} <br />
+                                                                    <!-- <form id="form4" method="post" action="">
+						                  <p>
+						                    <label for="listArea"></label>
+						                    <label for="txtarea"></label>
+						                  </p>
+					                    </form> --> </td>
 					                  </tr>
 						              <tr>
 						                <td colspan="2" align="center" id="letrasTablas2"><form id="form12" method="post" action="">
@@ -106,23 +114,6 @@ Description: A two-column web design, best for your personal and business bloggi
                                      </tr>
                                     </table></span></div>
                                    
-<table width="480" border="1" align="center" cellpadding="0" cellspacing="0">
-						              <tr>
-						                <td  ><table width="480" border="1" cellpadding="0" cellspacing="0">
-						                  <tr>
-						                    <td width="28" align="center" id="letrasTablas2">ID</td>
-						                    <td width="57" align="center" id="letrasTablas2">Tipo</td>
-						                    <td width="66" align="center" id="letrasTablas2">Persona de Soporte</td>
-						                    <td width="56" align="center" id="letrasTablas2">Descripción</td>
-						                    <td width="47" align="center" id="letrasTablas2">Usuario</td>
-						                    <td width="62" align="center" id="letrasTablas2">Fecha Creacion</td>
-						                    <td width="28" align="center" id="letrasTablas2">Fecha Cierre</td>
-						                    <td width="89" align="center" id="letrasTablas2">Estado</td>
-					                      </tr>
-						                  
-					                    </table></td>
-		                </tr>
-				                </table>
 						        <table border="2" width="480" cellpadding="0" cellspacing="0" >
     <tr>
                 <td width="28" align="center" id="letrasTablas">ID</td>
@@ -137,7 +128,7 @@ Description: A two-column web design, best for your personal and business bloggi
     <c:forEach var="ticket" items="${empleado.tickets}">
 
         <tr>
-            <td><a href="BandejaSoporte?idticket=${ticket.idTicket}" >${ticket.idTicket}</a></td>
+            <td><a href="BandejaTecnico?idticket=${ticket.idTicket}" >${ticket.idTicket}</a></td>
             <td> ${ticket.tipoSolicitud}<br/></td>
             <td> ${ticket.tecnico.nombre}</td>
             <td> ${ticket.descripcion}</td>
@@ -180,7 +171,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<li>
 							<h2>documentacion de ayuda</h2>
 							<ul>
-								<li>I<a href="#">ntroducción</a></li>
+								<li><a href="#">Introducción</a></li>
 								<li><a href="#">Caracteristicas</a></li>
 								<li></li>
 							</ul>
