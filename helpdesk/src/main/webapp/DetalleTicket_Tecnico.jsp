@@ -206,16 +206,16 @@ Description: A two-column web design, best for your personal and business bloggi
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Respuesta_tecnico.html">
+						  <form id="form1" method="post" action="login">
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
 							        <blockquote>
 							        							          <table width="200" border="0" align="center">
 							            <tr>
-							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Actualizar" /></td>
+							              <td width="60"><input name="1" type="reset" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
+							              <td width="66"><input name="2" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
 						                </tr>
 						              </table>
 							        </blockquote>
