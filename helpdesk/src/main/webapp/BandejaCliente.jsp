@@ -64,7 +64,7 @@ Description: A two-column web design, best for your personal and business bloggi
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<p class="date">set<b>22</b></p>
+						<p class="date">Oct<b>19</b></p>
                                                   <blockquote>
 						  <blockquote>
 						    <h2 class="title">Bandeja de Tickets del Cliente</h2>
@@ -164,9 +164,9 @@ Description: A two-column web design, best for your personal and business bloggi
 						  </ul>
 					  </li>
 						<li>
-							<h2>documentacion de ayuda</h2>
+							<h2>Documentacion de ayuda</h2>
 							<ul>
-								<li>I<a href="#">ntroducciÃ³n</a></li>
+								<li>I<a href="#">Introducción</a></li>
 								<li><a href="#">Caracteristicas</a></li>
 								<li></li>
 							</ul>

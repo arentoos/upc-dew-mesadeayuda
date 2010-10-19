@@ -251,7 +251,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<li>
 							<h2>Ayuda</h2>
 							<ul>
-								<li>I<a href="#">ntroducciÃ³n</a></li>
+								<li>I<a href="#">Introducción</a></li>
 								<li><a href="#">Caracteristicas</a></li>
 								<li></li>
 							</ul>
