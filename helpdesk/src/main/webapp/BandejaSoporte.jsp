@@ -89,13 +89,8 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 					                  </tr>
 						              <tr>
-						                <td height="26" align="right"  id="letrasTablas">${empleado.nombre}</td>
-						                <td><form id="form4" method="post" action="">
-						                  <p>
-						                    <label for="listArea"></label>
-						                    <label for="txtarea"></label>
-						                  </p>
-					                    </form></td>
+						                <td height="26" align="right"  id="letrasTablas">Persona de Soporte</td>
+                                                                <td height="26" align="left"  id="letrasTablas">${empleado.nombre}</td>
 					                  </tr>
 						              <tr>
 						                <td colspan="2" align="center" id="letrasTablas2"><form id="form12" method="post" action="">
@@ -187,7 +182,33 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </table></td>
 		                </tr>
 				                </table>
-						            
+						        <table border="2" width="480" cellpadding="0" cellspacing="0" >
+    <tr>
+                <td width="28" align="center" id="letrasTablas">ID</td>
+                <td width="57" align="center" id="letrasTablas">Tipo</td>
+                <td width="66" align="center" id="letrasTablas">Persona de Soporte</td>
+                <td width="56" align="center" id="letrasTablas">Descripcion</td>
+                <td width="47" align="center" id="letrasTablas">Usuario</td>
+                <td width="62" align="center" id="letrasTablas">Fecha Creacion</td>
+                <td width="28" align="center" id="letrasTablas">Fecha Cierre</td>
+                <td width="89" align="center" id="letrasTablas">Estado</td>
+</tr>
+    <c:forEach var="ticket" items="${empleado.tickets}">
+
+        <tr>
+            <td><a href="BandejaSoporte?idticket=${ticket.idTicket}" >${ticket.idTicket}</a></td>
+            <td> ${ticket.tipoSolicitud}<br/></td>
+            <td> ${ticket.tecnico.nombre}</td>
+            <td> ${ticket.descripcion}</td>
+            <td> ${ticket.cliente.nombre}<br/></td>
+            <td> ${ticket.fechaCreacion}</td>
+            <td> ${ticket.fechaCierre}<br/></td>
+            <td> ${ticket.estado}<br/></td>
+        </tr>
+
+    </c:forEach>
+
+ </table>
 				          </blockquote>
 			            </blockquote>
 				          </blockquote>
