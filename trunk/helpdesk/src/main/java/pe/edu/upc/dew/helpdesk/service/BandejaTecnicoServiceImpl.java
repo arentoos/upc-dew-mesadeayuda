@@ -17,9 +17,7 @@ public class BandejaTecnicoServiceImpl implements BandejaTecnicoService {
 
         Ticket vTicket = null;
 
-//        vTicket = new Ticket("1001", "Instalacion de software", "Software", "15/10/2010 09:30", "Ninguno", "Soporte Tenologico", "Requerimiento", "", new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0), new Empleado);
-
-        vTicket = new Ticket(idTicket, "Problema de acceso a la red", "Hardware", "17/10/2010 12:30", "En progreso", "Redes y Comunicaciones", "Incidencias/Averias", "", new Empleado(1, "cristina", "Marketing", "5678", "Creativa", "", "5454", "Cristina Gonzaga", "cgonzaga@ayudate.com", "C", 0), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0));
+        vTicket = new Ticket(idTicket, "Se cayo el aplicativo del sistema", "Software", "15/10/2010 09:30", "En progreso", "Desarrollo de Software", "Requerimiento", "", new Empleado(1, "carlos", "Desarrollo de Software", "9876", "Desarrollador", "", "9876", "Carlos Zegarra", "czegarra@ayudate.com", "C", 0), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0));
 
         return vTicket;
     }

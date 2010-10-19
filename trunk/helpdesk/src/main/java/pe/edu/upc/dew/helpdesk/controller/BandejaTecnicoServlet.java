@@ -2,7 +2,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package pe.edu.upc.dew.helpdesk.controller;
 
 import java.io.IOException;
@@ -11,33 +10,37 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pe.edu.upc.dew.helpdesk.model.Ticket;
+import pe.edu.upc.dew.helpdesk.service.BandejaTecnicoService;
+import pe.edu.upc.dew.helpdesk.service.BandejaTecnicoServiceImpl;
 
 /**
  *
  * @author RaulNR
  */
 public class BandejaTecnicoServlet extends HttpServlet {
-   
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
 
         // aqui deberia obtener el numero de ticket
+        String vIdTicket = request.getParameter("idticket");
 
         // Llamar al model
-//        BandejaClienteService vBandejaService = new BandejaClienteServiceImpl();
-//
-//        Ticket vTicket = vBandejaService.ObtenerTicket("1001");
+        BandejaTecnicoService vBandejaService = new BandejaTecnicoServiceImpl();
+
+        Ticket vTicket = vBandejaService.ObtenerTicket(vIdTicket);
 
         // Setear el model para el view
-//        request.setAttribute("ticket", vTicket);
-//
-//        request.getRequestDispatcher("DetalleTicket_cliente.jsp").forward(request, response);
+        request.setAttribute("ticket", vTicket);
+
+        request.getRequestDispatcher("DetalleTicket_Tecnico.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -47,14 +50,12 @@ public class BandejaTecnicoServlet extends HttpServlet {
     }// </editor-fold>
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-
         } finally {
             out.close();
         }
     }
-
 }
