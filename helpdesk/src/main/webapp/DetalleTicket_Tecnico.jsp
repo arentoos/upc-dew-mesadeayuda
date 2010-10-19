@@ -176,7 +176,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Categoria:</td>
-						                    <td colspan="3" id="letrasTablas4">>${ticket.categoria}</td>
+						                    <td colspan="3" >${ticket.categoria}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ultima actualizacion:</td>
