@@ -5,32 +5,34 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>pe.edu.upc.dew.helpdesk.controller.LoginServlet</servlet-class>
     </servlet>
-
     <servlet>
         <servlet-name>CreaTicketServlet</servlet-name>
         <servlet-class>pe.edu.upc.dew.helpdesk.controller.CreaTicketServlet</servlet-class>
     </servlet>
-
     <servlet>
         <servlet-name>BandejaClienteServlet</servlet-name>
         <servlet-class>pe.edu.upc.dew.helpdesk.controller.BandejaClienteServlet</servlet-class>
     </servlet>
-
+    <servlet>
+        <servlet-name>BandejaTecnicoServlet</servlet-name>
+        <servlet-class>pe.edu.upc.dew.helpdesk.controller.BandejaTecnicoServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>CreaTicketServlet</servlet-name>
         <url-pattern>/CreaTicketServlet</url-pattern>
     </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>BandejaClienteServlet</servlet-name>
         <url-pattern>/BandejaCliente</url-pattern>
     </servlet-mapping>
-
+    <servlet-mapping>
+        <servlet-name>BandejaTecnicoServlet</servlet-name>
+        <url-pattern>/BandejaTecnicoServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
