@@ -29,7 +29,7 @@ Description: A two-column web design, best for your personal and business bloggi
 	<div id="menu">
 	  <ul>
 	    <li class="current_page_item"></li>
-	    <li><a href="index.html"><span>inicio</span></a></li>
+	    <li><a href=="#"><span>inicio</span></a></li>
 	    <li><a href="#"><span>ayuda</span></a></li>
 	    <li></li>
 	    <li><a href="#"><span>Links</span></a></li>
@@ -119,66 +119,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                    <td width="28" align="center" id="letrasTablas2">Fecha Cierre</td>
 						                    <td width="89" align="center" id="letrasTablas2">Estado</td>
 					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1001</td>
-						                    <td>Incidencias</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Raul Villanueva</a></td>
-						                    <td>Instacion de programa</td>
-						                    <td>Carlos Zegarra</td>
-						                    <td>07/09/2010</td>
-						                    <td>-</td>
-						                    <td>Pendiente</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1002</td>
-						                    <td>Incidencias</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Carlos Zegarra</a></td>
-						                    <td>Monitor averiado</td>
-						                    <td>Miguel Valenzuela</td>
-						                    <td>15/10/2010</td>
-						                    <td>-</td>
-						                    <td>Ninguno</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1003</td>
-						                    <td>Requrimientos</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Raul Villanueva</a></td>
-						                    <td>Prob. Red Inhalambrica</td>
-						                    <td>Vasti Puchoc</td>
-						                    <td>18/09/2010</td>
-						                    <td>-</td>
-						                    <td>Pendiene</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1004</td>
-						                    <td>Consultas</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Enrique Phun</a></td>
-						                    <td>Pc no enciende</td>
-						                    <td>Enrique Huertas</td>
-						                    <td>20/09/2010</td>
-						                    <td>--</td>
-						                    <td>Pendiente</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1005</td>
-						                    <td>Incidencias</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Cristina Gonzaga</a></td>
-						                    <td>Acceso Web</td>
-						                    <td>Caren Huaman</td>
-						                    <td>15/09/2010</td>
-						                    <td>-</td>
-						                    <td>&nbsp;</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1006</td>
-						                    <td>Consultas</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Yenny Valenzuela</a></td>
-						                    <td>Monitor Averiado</td>
-						                    <td>Ivan Kenny Quiroz</td>
-						                    <td>07/09/2010</td>
-						                    <td>-</td>
-						                    <td>Ninguno</td>
-					                      </tr>
+						                  
 					                    </table></td>
 		                </tr>
 				                </table>
