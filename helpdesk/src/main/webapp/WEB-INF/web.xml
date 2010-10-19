@@ -22,16 +22,16 @@
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>CreaTicketServlet</servlet-name>
-        <url-pattern>/CreaTicketServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>BandejaClienteServlet</servlet-name>
         <url-pattern>/BandejaCliente</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BandejaTecnicoServlet</servlet-name>
         <url-pattern>/BandejaTecnico</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreaTicketServlet</servlet-name>
+        <url-pattern>/CreaTicket</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

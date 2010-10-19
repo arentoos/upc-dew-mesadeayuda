@@ -157,10 +157,9 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <li id="categories">
 						<h2>Opciones de Tickets</h2>
 						  <ul>
-							  <li><a href="creaTicket.jsp"> Crear Ticket </a></li>
-							  <li><a href="#">Mis Tickets Creados</a> (1) </li>
-							  <li><a href="#">Mis Tickets Cerrados </a></li>
-							  <li></li>
+							  <li><a href="CreaTicket?login=${empleado.login}" >Crear Ticket</a></li>
+						<!--	  <li><a href="#">Mis Tickets Creados</a> (1) </li>
+							  <li><a href="#">Mis Tickets Cerrados </a></li> -->
 						  </ul>
 					  </li>
 						<li>
