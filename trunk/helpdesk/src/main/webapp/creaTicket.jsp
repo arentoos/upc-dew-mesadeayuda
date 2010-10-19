@@ -65,20 +65,20 @@ Description: A two-column web design, best for your personal and business bloggi
 						      <blockquote>
 						        <table width="500" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
-						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL USUARIO</strong></td>
+						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL CLIENTE</strong></td>
 				                  </tr>
 						              <tr>
-						                <td width="100" align="right" id="letrasTablas">Usuario:</td>
+						                <td width="100" align="right" id="letrasTablas">Cliente:</td>
 						                <td width="200"><form id="form2" method="post" action="">
 						                  <p>
-						                    <input name="txtusu" type="text" disabled="disabled" id="txtusu" value="Yenny Valenzuela" />
+						                    <input name="txtusu" type="text" disabled="disabled" id="txtusu" value="${empleado.nombre}" />
 					                      </p>
 					                    </form></td>
 						                <td width="47" align="right" id="letrasTablas">Email:</td>
 						                <td width="144"><form id="form3" method="post" action="">
 						                  <p>
 						                    <label for="txtEmail"></label>
-						                    <input name="txtEmail" type="text" id="txtEmail" value="yenny44@ayudate.com" />
+						                    <input name="txtEmail" type="text" disabled="disabled" id="txtEmail" value="${empleado.email}" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -87,14 +87,14 @@ Description: A two-column web design, best for your personal and business bloggi
 						                <td><form id="form4" method="post" action="">
 						                  <p>						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
-						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="Jefatura Ventas Presenciales" />
+						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="${empleado.area}" />
 					                      </p>
 					                    </form></td>
 						                <td align="right" id="letrasTablas">Anexo:</td>
 						                <td><form id="form5" method="post" action="">
 						                  <p>
 						                    <label for="txtanexo"></label>
-						                    <input name="txtanexo" type="text" disabled="disabled" id="txtanexo" value="#655166" />
+						                    <input name="txtanexo" type="text" disabled="disabled" id="txtanexo" value="${empleado.anexo}" />
 					                      </p>
 					                    </form></td>
 					                  </tr>
@@ -107,7 +107,7 @@ Description: A two-column web design, best for your personal and business bloggi
 				                </table>
                                                                         <div><span id="lineaSepara"><table width="500" border="1" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
-                                          <td bgcolor="#B60044"> <strong class="meta">Informacion del Ticket</strong></td>
+                                            <td colspan="4" align="center" class="meta"> <strong>Informacion del Ticket</strong></td>
                                      </tr>
                                     </table></span></div>
 
@@ -131,7 +131,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						                  <p>
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria" id="listCategoria">
-						                      <option value="0">Soporte Tecnológico</option>
+						                      <option value="0">Soporte Tecnologico</option>
 						                      <option value="1">Desarrollo de Software</option>
 						                      <option value="2">Redes y Comunicaciones</option>
                                             </select>
@@ -153,7 +153,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					                    </form></td>
 		                </tr>
 						              <tr>
-						                <td align="right" id="letrasTablas">Descripciòn:</td>
+						                <td align="right" id="letrasTablas">Descripcion:</td>
 						                <td><form id="form9" method="post" action="">
 						                  <p>
                                                                       <label  for="txtdescripcion"> </label>
@@ -170,7 +170,7 @@ Description: A two-column web design, best for your personal and business bloggi
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Respuesta_cliente.html">
+						  <form id="form1" method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}">
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
@@ -179,7 +179,8 @@ Description: A two-column web design, best for your personal and business bloggi
 							            <tr>
 							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Crear ticket" /></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Borrar" /></td>
+							          <!--    <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Borrar" /></td> -->
+                                                                      <td width="66"><input name="cmdRegresar" type="submit" id="cmdRegresar" value="Regresar" /></td>
 						                </tr>
 						              </table>
 							        </blockquote>

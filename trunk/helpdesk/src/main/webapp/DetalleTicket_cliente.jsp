@@ -163,7 +163,7 @@ Description: A two-column web design, best for your personal and business bloggi
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Respuesta_tecnico.html">
+						  <form id="form1" method="post" action="Login?login=${ticket.cliente.login}&clave=${ticket.cliente.clave}">
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
