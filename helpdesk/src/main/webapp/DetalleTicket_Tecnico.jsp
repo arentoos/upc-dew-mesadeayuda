@@ -1,4 +1,6 @@
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 
 Design by Free CSS Templates
@@ -122,14 +124,16 @@ Description: A two-column web design, best for your personal and business bloggi
 						                    <td width="65" id="letrasTablas3">Grupo de Soporte</td>
 						                    <td width="194" align="center" id="letrasTablas2"><form id="form6" method="post" action="">
 				                            <p>
-						                          <label for="cmd_soporte"></label>
-						                          <select name="cmd_soporte" id="cmd_soporte">
-						                            <option value="0" selected="selected">${ticket.areaReportar}</option>
-                                                                            <option value="1">Soporte Tecnologico</option>
-						                            <option value="1">Desarrollo de Software</option>
-						                            <option value="2">Redes y Comunicaciones</option>
-	                                        </select>
-					                            </p>
+						                    <label for="cmd_soporte"></label>
+                                                                    <select name="cmd_soporte" id="cmd_soporte">
+                                                                        <option value="0" <c:if test="${ticket.areaReportar=='Soporte Tecnologico'}">selected="selected"</c:if> >Soporte Tecnologico</option>
+                                                                        <option value="1" <c:if test="${ticket.areaReportar=='Desarrollo de Software'}">selected="selected"</c:if> >Desarrollo de Software</option>
+                                                                        <option value="2" <c:if test="${ticket.areaReportar=='Redes y Comunicaciones'}">selected="selected"</c:if> >Redes y Comunicaciones</option>
+                                                                     <!--   <option value="1">Soporte Tecnologico</option>
+                                                                        <option value="1">Desarrollo de Software</option>
+                                                                        <option value="2">Redes y Comunicaciones</option> -->
+                                                                    </select>
+					                    </p>
 				                            </form></td>
 						                    <td width="66" align="center" id="letrasTablas3">Tecnico</td>
 						                    <td width="144" align="center" id="letrasTablas2"><form id="form7" method="post" action="">
@@ -145,11 +149,11 @@ Description: A two-column web design, best for your personal and business bloggi
 						                      <p>
 						                        <label for="cmdEstado"></label>
 						                        <select name="cmdEstado" id="cmdEstado">
-						                          <option value="0" selected="selected">${ticket.estado}</option>
-						                          <option value="1">En progreso</option>
-						                          <option value="2">Esperando respuesta</option>
-						                          <option value="3">Cerrado</option>
-					                            </select>
+						                          <option value="0" <c:if test="${ticket.estado=='Ninguno'}">selected="selected"</c:if> >Ninguno</option>
+                                                                          <option value="1" <c:if test="${ticket.estado=='En progreso'}">selected="selected"</c:if> >En progreso</option>
+						                          <option value="2" <c:if test="${ticket.estado=='Esperando respuesta'}">selected="selected"</c:if> >Esperando respuesta</option>
+						                          <option value="3" <c:if test="${ticket.estado=='Cerrado'}">selected="selected"</c:if> >Cerrado</option>
+                                                                        </select>
 					                          </p>
 					                        </form></td>
 						                    <td>&nbsp;</td>
@@ -176,7 +180,7 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Categoria:</td>
-						                    <td colspan="3" >${ticket.categoria}</td>
+						                    <td colspan="3" id="letrasTablas4">${ticket.categoria}</td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ultima actualizacion:</td>
@@ -207,14 +211,14 @@ Description: A two-column web design, best for your personal and business bloggi
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Login">
+						  <form id="form1" method="post" action="Login?login=${ticket.tecnico.login}&clave=${ticket.tecnico.clave}">
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
 							        <blockquote>
 							        							          <table width="200" border="0" align="center">
 							            <tr>
-							              <td width="60"><input name="1" type="reset" id="cmdCrear" value="Actualizar" /></td>
+							              <td width="60"><input name="1" type="submit" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
 							              <td width="66"><input name="2" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
 						                </tr>
@@ -251,7 +255,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						<li>
 							<h2>Ayuda</h2>
 							<ul>
-								<li>I<a href="#">Introducción</a></li>
+								<li><a href="#">Introduccion</a></li>
 								<li><a href="#">Caracteristicas</a></li>
 								<li></li>
 							</ul>

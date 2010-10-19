@@ -31,7 +31,7 @@ Description: A two-column web design, best for your personal and business bloggi
 	<div id="menu">
 	  <ul>
 	    <li class="current_page_item"></li>
-	    <li><a href=="#"><span>inicio</span></a></li>
+	    <li><a href="#"><span>inicio</span></a></li>
 	    <li><a href="#"><span>ayuda</span></a></li>
 	    <li></li>
 	    <li><a href="#"><span>Links</span></a></li>
@@ -103,7 +103,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						              <tr>
 						                <td colspan="2" align="center" id="letrasTablas2"><form id="form12" method="post" action="">
 						                  <p>
-						                    <input type="submit" name="cmdActualizar" id="cmdActualizar" value="Actualizar" />
+                                                                      <input type="submit" disabled name="cmdActualizar" id="cmdActualizar" value="Actualizar" />
 					                      </p>
 					                    </form></td>
 				                  </tr>
@@ -159,7 +159,7 @@ Description: A two-column web design, best for your personal and business bloggi
 				</div>
 				<div id="sidebar">
 					<ul>
-					  <li id="categories">
+				<!--	  <li id="categories">
 						<h2>Opciones de Tickets</h2>
 						  <ul>
 							  <li><a href="#">Mis tickets asignados </a>(4) </li>
@@ -167,7 +167,7 @@ Description: A two-column web design, best for your personal and business bloggi
 							  <li><a href="#">Tickets cerrados del grupo(4) </a></li>
 							  <li></li>
 						  </ul>
-					  </li>
+					  </li> -->
 						<li>
 							<h2>Documentacion de ayuda</h2>
 							<ul>
