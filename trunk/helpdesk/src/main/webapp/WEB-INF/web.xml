@@ -31,7 +31,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>BandejaTecnicoServlet</servlet-name>
-        <url-pattern>/BandejaTecnicoServlet</url-pattern>
+        <url-pattern>/BandejaTecnico</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

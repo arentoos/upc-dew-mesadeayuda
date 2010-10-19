@@ -108,88 +108,29 @@ Description: A two-column web design, best for your personal and business bloggi
                                     </table></span></div>
                                    
 <table width="480" border="1" align="center" cellpadding="0" cellspacing="0">
-						              <tr>
-						                <td  ><table width="480" border="1" cellpadding="0" cellspacing="0">
-						                  <tr>
-						                    <td width="28" align="center" id="letrasTablas2">ID</td>
-						                    <td width="57" align="center" id="letrasTablas2">Tipo</td>
-						                    <td width="66" align="center" id="letrasTablas2">Persona de Soporte</td>
-						                    <td width="56" align="center" id="letrasTablas2">Descripción</td>
-						                    <td width="47" align="center" id="letrasTablas2">Usuario</td>
-						                    <td width="62" align="center" id="letrasTablas2">Fecha Creacion</td>
-						                    <td width="28" align="center" id="letrasTablas2">Fecha Cierre</td>
-						                    <td width="89" align="center" id="letrasTablas2">Estado</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1001</td>
-						                    <td>Incidencias</td>
-						                    <td><a href="BandejaCliente">Raul Villanueva</a></td>
-						                    <td>Instacion de programa</td>
-						                    <td>Carlos Zegarra</td>
-						                    <td>07/09/2010</td>
-						                    <td>-</td>
-						                    <td>Pendiente</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1002</td>
-						                    <td>Incidencias</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Carlos Zegarra</a></td>
-						                    <td>Monitor averiado</td>
-						                    <td>Miguel Valenzuela</td>
-						                    <td>15/10/2010</td>
-						                    <td>-</td>
-						                    <td>Ninguno</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1003</td>
-						                    <td>Requrimientos</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Raul Villanueva</a></td>
-						                    <td>Prob. Red Inhalambrica</td>
-						                    <td>Vasti Puchoc</td>
-						                    <td>18/09/2010</td>
-						                    <td>-</td>
-						                    <td>Pendiene</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1004</td>
-						                    <td>Consultas</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Enrique Phun</a></td>
-						                    <td>Pc no enciende</td>
-						                    <td>Enrique Huertas</td>
-						                    <td>20/09/2010</td>
-						                    <td>--</td>
-						                    <td>Pendiente</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1005</td>
-						                    <td>Incidencias</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Cristina Gonzaga</a></td>
-						                    <td>Acceso Web</td>
-						                    <td>Caren Huaman</td>
-						                    <td>15/09/2010</td>
-						                    <td>-</td>
-						                    <td>&nbsp;</td>
-					                      </tr>
-						                  <tr id="letrasTablas3">
-						                    <td>1006</td>
-						                    <td>Consultas</td>
-						                    <td><a href="DetalleTicket_Tecnico.html">Yenny Valenzuela</a></td>
-						                    <td>Monitor Averiado</td>
-						                    <td>Ivan Kenny Quiroz</td>
-						                    <td>07/09/2010</td>
-						                    <td>-</td>
-						                    <td>Ninguno</td>
-					                      </tr>
-					                    </table></td>
-		                </tr>
-				                </table>
-<table border="2">
+						         </table>
+<table border="2" width="480" cellpadding="0" cellspacing="0" >
+    <tr>
+                <td width="28" align="center" id="letrasTablas">ID</td>
+                <td width="57" align="center" id="letrasTablas">Tipo</td>
+                <td width="66" align="center" id="letrasTablas">Persona de Soporte</td>
+                <td width="56" align="center" id="letrasTablas">Descripcion</td>
+                <td width="47" align="center" id="letrasTablas">Usuario</td>
+                <td width="62" align="center" id="letrasTablas">Fecha Creacion</td>
+                <td width="28" align="center" id="letrasTablas">Fecha Cierre</td>
+                <td width="89" align="center" id="letrasTablas">Estado</td>
+</tr>
     <c:forEach var="ticket" items="${empleado.tickets}">
-
+ 
         <tr>
-
-            <td> ${ticket.idTicket}</td>
-            <td> ${ticket.descripcion}<br/></td>
+            <td><a href="BandejaCliente?idticket=${ticket.idTicket}" >${ticket.idTicket}</a></td>
+            <td> ${ticket.tipoSolicitud}<br/></td>
+            <td> ${ticket.tecnico.nombre}</td>
+            <td> ${ticket.descripcion}</td>
+            <td> ${ticket.cliente.nombre}<br/></td>
+            <td> ${ticket.fechaCreacion}</td>
+            <td> ${ticket.fechaCierre}<br/></td>
+            <td> ${ticket.estado}<br/></td>
         </tr>
 
     </c:forEach>

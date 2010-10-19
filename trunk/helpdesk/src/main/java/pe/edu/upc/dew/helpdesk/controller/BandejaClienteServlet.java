@@ -27,11 +27,12 @@ public class BandejaClienteServlet extends HttpServlet {
     throws ServletException, IOException {
 
         // aqui deberia obtener el numero de ticket
+        String vIdTicket = request.getParameter("idticket");
 
         // Llamar al model
         BandejaClienteService vBandejaService = new BandejaClienteServiceImpl();
 
-        Ticket vTicket = vBandejaService.ObtenerTicket("1001");
+        Ticket vTicket = vBandejaService.ObtenerTicket(vIdTicket);
 
         // Setear el model para el view
         request.setAttribute("ticket", vTicket);

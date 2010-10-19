@@ -36,19 +36,18 @@ public class LoginServlet extends HttpServlet {
         req.setAttribute("empleado", empleado);
         req.setAttribute("idSession", vSesion.getId());
 
+
         if (empleado.getLogin().equals("yenny") == true) {
 
             // Seleccionar la siguiente vista, flujo de navegacion
             req.getRequestDispatcher("BandejaCliente.jsp").forward(req, resp);
-            //vSesion.setAttribute("objCliente", empleado);
-        }
-        else if (empleado.getLogin().equals("carlos") == true) {
+
+        } else if (empleado.getLogin().equals("carlos") == true) {
 
             req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
 
-            //vSesion.setAttribute("objSoporte", empleado);
-        }
-        else {
+
+        } else {
             PrintWriter out = resp.getWriter();
 
             out.println("El usuario " + login + " no esta registrado");
