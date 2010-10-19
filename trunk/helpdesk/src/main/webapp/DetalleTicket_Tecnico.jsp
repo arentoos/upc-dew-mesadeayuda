@@ -213,9 +213,9 @@ Description: A two-column web design, best for your personal and business bloggi
 							        <blockquote>
 							        							          <table width="200" border="0" align="center">
 							            <tr>
-							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Grabar" /></td>
+							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Regresar" /></td>
+							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
 						                </tr>
 						              </table>
 							        </blockquote>
