@@ -35,6 +35,8 @@ public class EmpleadoServiceImpl implements EmpleadoService {
             empleado.getTickets().add(new Ticket("1004", "Se cayo el aplicativo del sistema", "Aplicativo Web", "15/10/2010 09:30", "En progreso", "Desarrollo de Software", "Requerimiento", "", new Empleado(1, "carlos", "Desarrollo de Software", "1234", "Desarrollador", "", "1234", "Carlos Zegarra", "czegarra@ayudate.com", "T", 2), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0)));
 
             empleado.getTickets().add(new Ticket("1005", "Programa de Contabilidad no conecta con el servidor", "Aplicativo Cliente", "16/10/2010 09:30", "Pendiente", "Desarrollo de Software", "Consultas", "", new Empleado(1, "carlos", "Desarrollo de Software", "1234", "Desarrollador", "", "1234", "Carlos Zegarra", "czegarra@ayudate.com", "T", 2), new Empleado(1, "cristina", "Marketing", "1234", "Publicista", "", "1234", "Cristina Gonzaga Huertas", "cGonzaga@ayudate.com", "C", 0)));
+        } else {
+            empleado = new Empleado(1001, "marcos", "Finanzas", "1234", "Secretaria de Gerencia", "", "1234", "Yenny Valenzuela Leguia", "yenny44@ayudate.com", "C", 0);
         }
 
         return empleado;
