@@ -28,7 +28,7 @@ Description: A two-column web design, best for your personal and business bloggi
 	</div>
 	<div id="menu">
 	  <ul>
-	    <li><a href="index.html"><span>inicio</span></a></li>
+	    <li><a href="#"><span>inicio</span></a></li>
 	    <li><a href="#"><span>ayuda</span></a></li>
 	    <li></li>
 	    <li><a href="#"><span>Links</span></a></li>
