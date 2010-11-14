@@ -149,15 +149,16 @@ Description: A two-column web design, best for your personal and business bloggi
 						                      <p>
 						                        <label for="cmdEstado"></label>
 						                        <select name="cmdEstado" id="cmdEstado">
-						                          <option value="0" <c:if test="${ticket.estado=='Ninguno'}">selected="selected"</c:if> >Ninguno</option>
-                                                                          <option value="1" <c:if test="${ticket.estado=='En progreso'}">selected="selected"</c:if> >En progreso</option>
-						                          <option value="2" <c:if test="${ticket.estado=='Esperando respuesta'}">selected="selected"</c:if> >Esperando respuesta</option>
-						                          <option value="3" <c:if test="${ticket.estado=='Cerrado'}">selected="selected"</c:if> >Cerrado</option>
+                                                                            <option disabled="true" value="0" <c:if test="${ticket.estado=='Sin Atencion'}">selected="selected"</c:if> >Sin Atencion</option>
+                                                                            <option disabled="true" value="1" <c:if test="${ticket.estado=='Pendiente'}">selected="selected"</c:if> >Pendiente</option>
+                                                                            <option value="2" <c:if test="${ticket.estado=='Esperando Respuesta'}">selected="selected"</c:if> >Esperando Respuesta</option>
+                                                                            <option value="3" <c:if test="${ticket.estado=='Resuelto'}">selected="selected"</c:if> >Resuelto</option>
+						                          
                                                                         </select>
 					                          </p>
 					                        </form></td>
-						                    <td>&nbsp;</td>
-						                    <td>&nbsp;</td>
+						                    <td></td>
+						                    <td></td>
 					                      </tr>
 						                  <tr>
 						                    <td colspan="4" bgcolor="#B60044" class="meta"><strong>Detalle</strong></td>
