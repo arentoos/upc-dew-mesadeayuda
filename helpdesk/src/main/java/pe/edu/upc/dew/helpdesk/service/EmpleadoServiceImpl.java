@@ -1,20 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.edu.upc.dew.helpdesk.service;
 
 import pe.edu.upc.dew.helpdesk.model.Empleado;
 import pe.edu.upc.dew.helpdesk.model.Ticket;
 
-/**
- *
- * @author XP
- */
 public class EmpleadoServiceImpl implements EmpleadoService {
 
     public Empleado logeo(String login, String clave) {
-
 
         Ticket ticket = null;
 
