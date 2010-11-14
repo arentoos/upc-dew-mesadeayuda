@@ -1,3 +1,5 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page contentType="text/html" pageEncoding="windows-1252"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 
@@ -152,11 +154,29 @@ Description: A two-column web design, best for your personal and business bloggi
 						                      <p>
 						                        <label for="txtDescrip"></label>
                                                 <textarea name="txtDescrip" id="txtDescrip"></textarea>
-					                          </p>
+                                                                      </p>
+
 					                        </form></td>
-					                      </tr>
+                                                                    <tr><td id="letrasTablas3">Su solicitud fue Atendida</td>
+
+                                                                        <td>
+                                                                          <p>
+
+						                       
+                                                                              <select name="cmdConfirmar" id="cmdConfirmar" <c:if test="${ticket.estado=='Resuelto'}">disabled="true"</c:if> >
+                                                                                  
+                                                                            <option  value="0" >Aceptar</option>
+                                                                            <option  value="1" >Rechazar</option>
+                                                                            
+                                                                        </select>
+					                          </p>
+                                                                        
+                                                                        </td>
+
+                                                                    </tr>
+                                                                  
 					                    </table></td>
-		                </tr>
+		                
 				                </table>
 						            
 				          </blockquote>
