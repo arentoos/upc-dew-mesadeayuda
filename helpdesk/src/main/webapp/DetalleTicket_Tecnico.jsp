@@ -243,7 +243,7 @@ function valida(F) {
 							    <blockquote>
 							      <blockquote>
 							        <blockquote>
-							        							          <table width="200" border="0" align="center">
+							 <table width="200" border="0" align="center">
 							            <tr>
 							              <td width="60"><input name="1" type="submit" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
