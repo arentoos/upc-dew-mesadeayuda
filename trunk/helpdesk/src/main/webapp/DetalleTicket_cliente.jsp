@@ -20,6 +20,32 @@ Description: A two-column web design, best for your personal and business bloggi
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+
+
+ <script language="javascript" type="text/javascript">
+//busca caracteres que no sean espacio en blanco en una cadena
+function vacio(q) {
+        for ( i = 0; i < q.length; i++ ) {
+                if ( q.charAt(i) != " " ) {
+                        return true
+                }
+        }
+        return false
+}
+//valida que el campo no este vacio y no tenga solo espacios en blanco
+function valida(F) {
+
+        if( vacio(F.txtDescrip.value) == false  ) {
+                alert("Introduzca Descripción valida")
+                return false
+        } else {
+               // alert("OK")
+                //cambiar la linea siguiente por return true para que ejecute la accion del formulario
+                return true
+        }
+}
+
+</script>
 </head>
 <body>
 <!-- start header -->
@@ -65,47 +91,48 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
+                                                          <form id="form1" method="post" action="Login?login=${ticket.cliente.login}&clave=${ticket.cliente.clave}" onsubmit="return valida(this)">
 						        <table width="481" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>INFORMACION DEL USUARIO</strong></td>
 				                  </tr>
 						              <tr>
 						                <td width="162" align="right" id="letrasTablas">Nombre completo:</td>
-						                <td width="248"><form id="form2" method="post" action="">
+						                <td width="248">
 						                  <p>
 						                    <label for="listTipo"></label>
 						                    <label for="txtnom"></label>
 						                    <input name="txtnom" type="text" disabled="disabled" id="txtnom" value="${ticket.cliente.nombre}" />
 						                  </p>
-					                    </form></td>
+					                 </td>
 					                  </tr>
 						              <tr>
 						                <td height="26" align="right"  id="letrasTablas">Email:</td>
-						                <td><form id="form4" method="post" action="">
+						                <td>
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
 						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="${ticket.cliente.email}" />
 					                      </p>
-					                    </form></td>
+					                    </td>
 					                  </tr>
 						              <tr>
 						                <td height="26" align="right"  id="letrasTablas">Anexo:</td>
-						                <td><form id="form3" method="post" action="">
+						                <td>
 						                  <p>
 						                    <label for="txtini"></label>
 						                    <input name="txtini" type="text" disabled="disabled" id="txtini" value="${ticket.cliente.anexo}" />
 					                      </p>
-					                    </form></td>
+					                   </td>
 				                  </tr>
 						              <tr>
 						                <td align="right" id="letrasTablas">Area</td>
-						                <td><form id="form5" method="post" action="">
+						                <td>
 						                  <p>
 						                    <label for="txtfin"></label>
 						                    <input name="txtfin" type="text" disabled="disabled" id="txtfin" value="${ticket.cliente.area}" />
 					                      </p>
-					                    </form></td>
+					                   </td>
 					                  </tr>
 						              <tr>
 						                <td colspan="2" align="center" id="letrasTablas2"></td>
@@ -150,13 +177,13 @@ Description: A two-column web design, best for your personal and business bloggi
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Comentarios</td>
-						                    <td colspan="3"><form id="form9" method="post" action="">
+						                    <td colspan="3">
 						                      <p>
 						                        <label for="txtDescrip"></label>
                                                 <textarea name="txtDescrip" id="txtDescrip"></textarea>
                                                                       </p>
 
-					                        </form></td>
+					                      </td>
                                                                     <tr><td id="letrasTablas3">Su solicitud fue Atendida</td>
 
                                                                         <td>
@@ -183,24 +210,25 @@ Description: A two-column web design, best for your personal and business bloggi
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Login?login=${ticket.cliente.login}&clave=${ticket.cliente.clave}">
+						  
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
 							        <blockquote>
-							        							          <table width="200" border="0" align="center">
+							  <table width="200" border="0" align="center">
 							            <tr>
 							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
 							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
 						                </tr>
 						              </table>
+                                                                    </form>
 							        </blockquote>
 							      </blockquote>
 					          </blockquote>
 							    <p>&nbsp;</p>
 						    </blockquote>
-					      </form>
+					      
 						  <p>&nbsp;</p>
 				      </div>
 					</div>

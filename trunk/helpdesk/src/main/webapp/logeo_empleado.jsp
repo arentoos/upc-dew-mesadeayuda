@@ -18,6 +18,31 @@ Description: A two-column web design, best for your personal and business bloggi
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+//busca caracteres que no sean espacio en blanco en una cadena
+function vacio(q) {
+        for ( i = 0; i < q.length; i++ ) {
+                if ( q.charAt(i) != " " ) {
+                        return true
+                }
+        }
+        return false
+}
+//valida que el campo no este vacio y no tenga solo espacios en blanco
+function valida(F) {
+
+        if( vacio(F.login.value) == false || vacio(F.clave.value) == false  ) {
+                alert("Introduzca un Usuario y/o Contraseña.")
+                return false
+        } else {
+               // alert("OK")
+                //cambiar la linea siguiente por return true para que ejecute la accion del formulario
+                return true
+        }
+}
+
+</script>
+
 </head>
 <body>
    <!-- start header -->
@@ -66,7 +91,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						        <blockquote>
 						          <blockquote>
 						            <p>&nbsp;</p>
-                                                         <form id="form1" method="post" action="Login" >
+                                                            <form id="form1" method="post" action="Login" onsubmit="return valida(this)" >
 						            <table width="200" border="0">
 						              <tr>
 						                <td id="letrasTablas">Usuario</td>
