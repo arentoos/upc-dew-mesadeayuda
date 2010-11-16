@@ -18,6 +18,30 @@ Description: A two-column web design, best for your personal and business bloggi
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript">
+//busca caracteres que no sean espacio en blanco en una cadena
+function vacio(q) {
+        for ( i = 0; i < q.length; i++ ) {
+                if ( q.charAt(i) != " " ) {
+                        return true
+                }
+        }
+        return false
+}
+//valida que el campo no este vacio y no tenga solo espacios en blanco
+function valida(F) {
+
+        if( vacio(F.txtdescripcion.value) == false  ) {
+                alert("Introduzca Descripción valida")
+                return false
+        } else {
+               // alert("OK")
+                //cambiar la linea siguiente por return true para que ejecute la accion del formulario
+                return true
+        }
+}
+
+</script>
 </head>
 <body>
 <!-- start header -->
@@ -63,40 +87,41 @@ Description: A two-column web design, best for your personal and business bloggi
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
+                                                          <form id="form1" method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}" onsubmit="return valida(this)">
 						        <table width="500" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL CLIENTE</strong></td>
 				                  </tr>
 						              <tr>
 						                <td width="100" align="right" id="letrasTablas">Cliente:</td>
-						                <td width="200"><form id="form2" method="post" action="">
+						                <td width="200">
 						                  <p>
 						                    <input name="txtusu" type="text" disabled="disabled" id="txtusu" value="${empleado.nombre}" />
 					                      </p>
-					                    </form></td>
+					                    </td>
 						                <td width="47" align="right" id="letrasTablas">Email:</td>
-						                <td width="144"><form id="form3" method="post" action="">
+						                <td width="144">
 						                  <p>
 						                    <label for="txtEmail"></label>
 						                    <input name="txtEmail" type="text" disabled="disabled" id="txtEmail" value="${empleado.email}" />
 					                      </p>
-					                    </form></td>
+					                    </td>
 					                  </tr>
 						              <tr>
 						                <td height="26" align="right"  id="letrasTablas">Area:</td>
-						                <td><form id="form4" method="post" action="">
+						                <td>
 						                  <p>						                    <label for="listArea"></label>
 						                    <label for="txtarea"></label>
 						                    <input name="txtarea" type="text" disabled="disabled" id="txtarea" value="${empleado.area}" />
 					                      </p>
-					                    </form></td>
+					                    </td>
 						                <td align="right" id="letrasTablas">Anexo:</td>
-						                <td><form id="form5" method="post" action="">
+						                <td>
 						                  <p>
 						                    <label for="txtanexo"></label>
 						                    <input name="txtanexo" type="text" disabled="disabled" id="txtanexo" value="${empleado.anexo}" />
 					                      </p>
-					                    </form></td>
+					                   </td>
 					                  </tr>
 						              <tr>
 						                <td>&nbsp;</td>
@@ -114,7 +139,7 @@ Description: A two-column web design, best for your personal and business bloggi
 <table width="500" border="1" align="center" cellpadding="0" cellspacing="0">
 						              <tr>
 						                <td  width="90" align="right" id="letrasTablas"> Asunto:</td>
-						                <td width="500"><form id="form6" method="post" action="">
+						                <td width="500">
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <select name="listArea" id="listArea">
@@ -123,11 +148,11 @@ Description: A two-column web design, best for your personal and business bloggi
 						                      <option value="3">Consultas</option>
                                             </select>
 					                      </p>
-					                    </form></td>
+					                    </td>
 	                    </tr>
 						              <tr>
 						                <td align="right" id="letrasTablas">Area:</td>
-						                <td><form id="form7" method="post" action="">
+						                <td>
 						                  <p>
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria" id="listCategoria">
@@ -136,11 +161,11 @@ Description: A two-column web design, best for your personal and business bloggi
 						                      <option value="2">Redes y Comunicaciones</option>
                                             </select>
 					                      </p>
-					                    </form></td>
+					                   </td>
 					                  </tr>
 						              <tr>
 						                <td align="right" id="letrasTablas">Categoria:</td>
-						                <td><form id="form8" method="post" action="">
+						                <td>
 						                  <p>
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria2" id="listCategoria">
@@ -150,27 +175,28 @@ Description: A two-column web design, best for your personal and business bloggi
 
 					                        </select>
 					                      </p>
-					                    </form></td>
+					                   </td>
 		                </tr>
 						              <tr>
 						                <td align="right" id="letrasTablas">Descripcion:</td>
-						                <td><form id="form9" method="post" action="">
+                                                                <td>
 						                  <p>
                                                                       <label  for="txtdescripcion"> </label>
                                                                       <textarea cols="50" rows="6" name="txtdescripcion" id="txtdescripcion"></textarea>
 						                  </p>
-					                    </form></td>
+					                    </td>
 		                </tr>
 						              <tr>
 						         
 		                </tr>
 				                </table>
 
+
 				          </blockquote>
 			            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  <form id="form1" method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}">
+						  
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
