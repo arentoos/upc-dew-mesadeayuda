@@ -26,7 +26,25 @@ public class EmpleadoServiceImpl implements EmpleadoService {
             empleado.getTickets().add(new Ticket("1004", "Se cayo el aplicativo del sistema", "Aplicativo Web", "15/10/2010 09:30", "Sin Atencion", "Desarrollo de Software", "Requerimiento", "", new Empleado(1, "carlos", "Desarrollo de Software", "1234", "Desarrollador", "", "1234", "Carlos Zegarra", "czegarra@ayudate.com", "T", 2), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0)));
 
             empleado.getTickets().add(new Ticket("1005", "Programa de Contabilidad no conecta con el servidor", "Aplicativo Cliente", "16/10/2010 09:30", "Esperando Respuesta", "Desarrollo de Software", "Consultas", "", new Empleado(1, "carlos", "Desarrollo de Software", "1234", "Desarrollador", "", "1234", "Carlos Zegarra", "czegarra@ayudate.com", "T", 2), new Empleado(1, "cristina", "Marketing", "1234", "Publicista", "", "1234", "Cristina Gonzaga Huertas", "cGonzaga@ayudate.com", "C", 0)));
-        } else {
+        }
+        else if (login.equals("raul") == true) {
+
+            empleado = new Empleado(1, login, "Soporte Tecnico", "9876", "Tecnico", "", "9876", "Raul Neyra", "rneyra@ayudate.com", "C", 0);
+
+            empleado.getTickets().add(new Ticket("1006", "Se cayo el aplicativo del sistema", "Aplicativo Web", "15/10/2010 09:30", "Sin Atencion", "Soporte Tecnico", "Requerimiento", "", new Empleado(1, "raul", "Soporte Tecnico", "1234", "Tecnico", "", "1234", "Raul Neyra", "rneyra@ayudate.com", "T", 2), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0)));
+
+            empleado.getTickets().add(new Ticket("1007", "Programa de Contabilidad no conecta con el servidor", "Aplicativo Cliente", "16/10/2010 09:30", "Esperando Respuesta", "Soporte Tecnico", "Consultas", "", new Empleado(1, "raul", "Gerencia", "1234", "Secretaria", "", "1234", "Raul Neyra", "vcastro@ayudate.com", "T", 2), new Empleado(1, "Norma", "Contabilidad", "1234", "Contador", "", "1234", "Norma Lopez Duran", "nlopez@ayudate.com", "C", 0)));
+        }
+        else if (login.equals("cristina") == true) {
+
+            empleado = new Empleado(1, login, "Rddes y Comunicaciones", "9876", "Tecnico", "", "9876", "Crsitina Gonzaga", "cgonzaga@ayudate.com", "C", 0);
+
+            empleado.getTickets().add(new Ticket("1008", "Se cayo el aplicativo del sistema", "Aplicativo Web", "15/10/2010 09:30", "Sin Atencion", "Redes y Comunicaciones", "Requerimiento", "", new Empleado(1, "cristina", "Redes y Comunicaciones", "1234", "Tecnico", "", "1234", "Cristina Gonzaga", "cgonzaga@ayudate.com", "T", 2), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0)));
+
+            empleado.getTickets().add(new Ticket("1009", "Programa de Contabilidad no conecta con el servidor", "Aplicativo Cliente", "16/10/2010 09:30", "Esperando Respuesta", "Desarrollo de Software", "Consultas", "", new Empleado(1, "cristina", "Soporte Tecnico", "1234", "Tecnico", "", "1234", "Cristina Gonzaga", "cgonzaga@ayudate.com", "T", 2), new Empleado(1, "Melania", "Marketing", "1234", "Publicista", "", "1234", "Melania Urbina Castro", "murbina@ayudate.com", "C", 0)));
+        }
+
+        else {
             empleado = new Empleado(1001, "marcos", "Finanzas", "1234", "Secretaria de Gerencia", "", "1234", "Yenny Valenzuela Leguia", "yenny44@ayudate.com", "C", 0);
         }
 

@@ -36,7 +36,7 @@ function vacio(q) {
 function valida(F) {
 
         if( vacio(F.txtDescrip.value) == false  ) {
-                alert("Introduzca Descripción valida")
+                alert("Introduzca Descripcion valida")
                 return false
         } else {
                // alert("OK")
@@ -219,7 +219,7 @@ function valida(F) {
 							            <tr>
 							              <td width="60"><input name="cmdCrear" type="submit" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="cmdBorrar" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
+							              <td width="66"><input name="cmdcancel" type="button"  onclick="document.location='BandejaCliente.jsp'"  value="Regresar a Bandeja"/></td>
 						                </tr>
 						              </table>
                                                                     </form>
