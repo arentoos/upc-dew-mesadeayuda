@@ -23,6 +23,9 @@ Description: A two-column web design, best for your personal and business bloggi
 
  <script language="javascript" type="text/javascript">
 //busca caracteres que no sean espacio en blanco en una cadena
+
+
+
 function vacio(q) {
         for ( i = 0; i < q.length; i++ ) {
                 if ( q.charAt(i) != " " ) {
@@ -33,15 +36,16 @@ function vacio(q) {
 }
 //valida que el campo no este vacio y no tenga solo espacios en blanco
 function valida(F) {
-
+ 
         if( vacio(F.txtDescrip.value) == false  ) {
-                alert("Introduzca Descripción valida")
+                alert("Introduzca Descripcion valida")
                 return false
         } else {
                // alert("OK")
                 //cambiar la linea siguiente por return true para que ejecute la accion del formulario
                 return true
         }
+
 }
 
 </script>
@@ -247,7 +251,8 @@ function valida(F) {
 							            <tr>
 							              <td width="60"><input name="1" type="submit" id="cmdCrear" value="Actualizar" /></td>
 							              <td width="52">&nbsp;</td>
-							              <td width="66"><input name="2" type="submit" id="cmdBorrar" value="Regresar a Bandeja" /></td>
+                                                                      <td width="66"><input name="cmdcancel" type="button"  onclick="document.location='BandejaSoporte.jsp'"  value="Regresar a Bandeja"/></td>
+							          
 						                </tr>
 						              </table>
 							        </blockquote>

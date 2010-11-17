@@ -32,7 +32,7 @@ function vacio(q) {
 function valida(F) {
 
         if( vacio(F.login.value) == false || vacio(F.clave.value) == false  ) {
-                alert("Introduzca un Usuario y/o Contraseña.")
+                alert("Introduzca un Usuario y/o Clave.")
                 return false
         } else {
                // alert("OK")

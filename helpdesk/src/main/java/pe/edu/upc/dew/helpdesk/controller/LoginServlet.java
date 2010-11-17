@@ -54,7 +54,18 @@ public class LoginServlet extends HttpServlet {
 
             req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
 
-        } else {
+        }
+        else if (empleado.getLogin().equals("cristina") == true) {
+
+            req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
+
+        } else if (empleado.getLogin().equals("raul") == true) {
+
+            req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
+
+        }
+
+        else {
             PrintWriter out = resp.getWriter();
 
             out.println("El usuario " + login + " no esta registrado");
