@@ -8,8 +8,11 @@ import java.sql.Statement;
 
 public class JdbcUtils {
 
-    private static final String DRIVER = "org.apache.derby.jdbc.ClientDriver";
-    private static final String URL_CONNECTION = "jdbc:derby://localhost:1527/HELPDESK;user=app;password=app";
+    //private static final String DRIVER = "org.apache.derby.jdbc.ClientDriver";
+    //private static final String URL_CONNECTION = "jdbc:derby://localhost:1527/HELPDESK;user=app;password=app";
+
+    private static final String DRIVER = "net.sourceforge.jtds.jdbc.Driver";
+    private static final String URL_CONNECTION = "jdbc:jtds:sqlserver://CZEGARRA:1433/HELPDESK;user=sa;password=ceviche";
 
     public static Connection getConnection() {
         Connection connection = null;

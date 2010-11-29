@@ -11,16 +11,16 @@ public class EmpleadoDaoTest {
 
         EmpleadoDao empleadoDao = new EmpleadoDaoJdbc();
         Empleado empleado = empleadoDao.getEmpleadoPorLoginName("yenny");
-        Assert.assertEquals("Yenny Valenzuela", empleado.getNombre());
-
-    }
-     @Test
-    public void devuelveClaveevnviandoNombreCarlos(){
-     EmpleadoDao empleadoDao = new EmpleadoDaoJdbc();
-     Empleado empleado = empleadoDao.getEmpleadoPorLoginName("carlos");
-     Assert.assertEquals("456", empleado.getClave());
+        Assert.assertEquals("Yenny Valenzuela Leguia", empleado.getNombre());
 
     }
 
+    @Test
+    public void devuelveClaveevnviandoNombreCarlos() {
 
+        EmpleadoDao empleadoDao = new EmpleadoDaoJdbc();
+        Empleado empleado = empleadoDao.getEmpleadoPorLoginName("carlos");
+        Assert.assertEquals("123", empleado.getClave());
+
+    }
 }
