@@ -11,7 +11,7 @@ public class JdbcUtils {
     //private static final String DRIVER = "org.apache.derby.jdbc.ClientDriver";
     //private static final String URL_CONNECTION = "jdbc:derby://localhost:1527/HELPDESK;user=app;password=app";
 
-    private static final String DRIVER = "net.sourceforge.jtds.jdbc.Driver";
+    private static final String DRIVER = "net.sourceforge.jtds.jdbc.Driver";//1433
     private static final String URL_CONNECTION = "jdbc:jtds:sqlserver://localhost:1433/HELPDESK;user=sa;password=ceviche";
 
     public static Connection getConnection() {
@@ -20,7 +20,7 @@ public class JdbcUtils {
             Class.forName(DRIVER).newInstance();
             connection = DriverManager.getConnection(URL_CONNECTION);
         } catch (Exception e) {
-            throw new IllegalStateException("Error al obtener Connection", e);
+          throw new IllegalStateException("Error al obtener Connection", e);
         }
         return connection;
     }

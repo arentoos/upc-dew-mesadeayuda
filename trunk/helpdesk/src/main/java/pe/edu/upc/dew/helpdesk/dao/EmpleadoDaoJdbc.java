@@ -18,7 +18,7 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
         try {
             Statement st = conn.createStatement();
 
-            ResultSet rs = st.executeQuery("select login, clave, nombre from Empleado where login ='" + loginName + "'");
+            ResultSet rs = st.executeQuery("select  login, nombre,area,cargo,email,anexo,tipoEmpleado,jefe,nivelSoporte, clave from Empleado where login ='" + loginName + "'");
 
             if (rs.next()) {
                 Empleado empleado = new Empleado();
