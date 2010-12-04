@@ -87,7 +87,7 @@ function valida(F) {
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
-                                                          <form id="form1" method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}" onsubmit="return valida(this)">
+                                                          <form id="form1" method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}&operacion=crearTicket" onsubmit="return valida(this)">
 						        <table width="500" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL CLIENTE</strong></td>
@@ -143,9 +143,9 @@ function valida(F) {
 						                  <p>
 						                    <label for="listArea"></label>
 						                    <select name="listArea" id="listArea">
-						                      <option value="1">Incidencias/Averias</option>
-						                      <option value="2">Requerimiento</option>
-						                      <option value="3">Consultas</option>
+						                      <option value="8">Incidencias</option>
+						                      <option value="9">Requerimientos</option>
+						                      <option value="10">Consultas</option>
                                             </select>
 					                      </p>
 					                    </td>
@@ -156,9 +156,9 @@ function valida(F) {
 						                  <p>
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria" id="listCategoria">
-						                      <option value="0">Soporte Tecnologico</option>
-						                      <option value="1">Desarrollo de Software</option>
-						                      <option value="2">Redes y Comunicaciones</option>
+						                      <option value="12">Soporte Tecnologico</option>
+						                      <option value="11">Desarrollo de Software</option>
+						                      <option value="13">Redes y Comunicaciones</option>
                                             </select>
 					                      </p>
 					                   </td>
@@ -169,9 +169,9 @@ function valida(F) {
 						                  <p>
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria2" id="listCategoria">
-						                      <option value="1">Hardware</option>
-						                      <option value="2">Software</option>
-                                                                      <option value="3">Plataforma </option>
+						                      <option value="15">Hardware</option>
+						                      <option value="16">Software</option>
+                                                                      <option value="17">Plataforma </option>
 
 					                        </select>
 					                      </p>

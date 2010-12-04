@@ -109,7 +109,7 @@ function valida(F) {
 					            </blockquote>
 				          </blockquote>
 				        </blockquote>
-						  
+						  <input type="hidden" name="operacion" value="login" />
 						    <blockquote>
 							    <blockquote>
 							      <blockquote>
