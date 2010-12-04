@@ -7,4 +7,7 @@
   <bean id="empleadoService" class="pe.edu.upc.dew.helpdesk.service.EmpleadoServiceImpl">
   </bean>
 
+  <bean id="ticketService" class="pe.edu.upc.dew.helpdesk.service.TicketServiceImpl">
+  </bean>
+
 </beans>
