@@ -27,17 +27,7 @@ public class CreaTicketServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        // Recuperamos datos del view
-//        String login = req.getParameter("login");
-
-        // Llamar al model
-        //EmpleadoService empleadoService = new EmpleadoServiceImpl();
-
-//        Empleado empleado = pEmpleadoService.logeo(login, "");
-
-        // Setear el model para el view
-//        req.setAttribute("empleado", empleado);
-
+        // No es necesario obtener al empleado porque ya se encuentra en la sesión
         req.getRequestDispatcher("creaTicket.jsp").forward(req, resp);
     }
 

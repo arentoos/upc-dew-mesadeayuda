@@ -12,7 +12,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import pe.edu.upc.dew.helpdesk.model.Empleado;
 import pe.edu.upc.dew.helpdesk.service.EmpleadoService;
-import pe.edu.upc.dew.helpdesk.service.EmpleadoServiceImpl;
+//import pe.edu.upc.dew.helpdesk.service.EmpleadoServiceImpl;
 
 
 public class LoginServlet extends HttpServlet {
@@ -37,14 +37,12 @@ public class LoginServlet extends HttpServlet {
         String clave = req.getParameter("clave");
 
         // Llamar al model
-        //EmpleadoService empleadoService = new EmpleadoServiceImpl();
         Empleado empleado = pEmpleadoService.logeo(login, clave);
 
         // Setear el model para el view
         vSesion.setAttribute("empleado", empleado);
-//        req.setAttribute("empleado", empleado);
-//        req.setAttribute("idSession", vSesion.getId());
 
+        // SE DEBE REDIRIGIR mirando el tipo de empleado
         if (empleado.getLogin().equals("yenny") == true) {
 
             // Seleccionar la siguiente vista, flujo de navegacion
@@ -62,7 +60,6 @@ public class LoginServlet extends HttpServlet {
         } else if (empleado.getLogin().equals("raul") == true) {
 
             req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
-
         }
 
         else {
