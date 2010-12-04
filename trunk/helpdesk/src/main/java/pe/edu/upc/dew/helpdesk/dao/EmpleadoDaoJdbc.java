@@ -18,14 +18,24 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
         try {
             Statement st = conn.createStatement();
 
-            ResultSet rs = st.executeQuery("select  login, nombre,area,cargo,email,anexo,tipoEmpleado,jefe,nivelSoporte, clave from Empleado where login ='" + loginName + "'");
+            ResultSet rs = st.executeQuery("select idEmpleado, login, nombre, area, cargo, email, anexo, tipoEmpleado, jefe, nivelSoporte, clave from Empleado where login ='" + loginName + "'");
 
             if (rs.next()) {
+
                 Empleado empleado = new Empleado();
+
                 // nombre de la columna
+                empleado.setIdEmpleado(Integer.parseInt(rs.getString("idEmpleado")));
                 empleado.setLogin(rs.getString("login"));
-                empleado.setClave(rs.getString("clave"));
                 empleado.setNombre(rs.getString("nombre"));
+                empleado.setArea(rs.getString("area"));
+                empleado.setCargo(rs.getString("cargo"));
+                empleado.setEmail(rs.getString("email"));
+                empleado.setAnexo(rs.getString("anexo"));
+                empleado.setTipoEmpleado(rs.getString("tipoEmpleado"));
+                empleado.setJefe(rs.getString("jefe"));
+                empleado.setClave(rs.getString("clave"));
+                
                 return empleado;
             }
 
