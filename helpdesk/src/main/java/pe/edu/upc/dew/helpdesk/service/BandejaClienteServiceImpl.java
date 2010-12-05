@@ -19,7 +19,7 @@ public class BandejaClienteServiceImpl implements BandejaClienteService {
 
 //        vTicket = new Ticket("1001", "Instalacion de software", "Software", "15/10/2010 09:30", "Ninguno", "Soporte Tenologico", "Requerimiento", "", new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0), new Empleado);
 
-        vTicket = new Ticket(idTicket, "Se cayo el aplicativo del sistema", "Software", "17/10/2010 12:30", "Sin Atencion", "Redes y Comunicaciones", "Incidencias/Averias", "", new Empleado(1, "cristina", "Marketing", "5678", "Creativa", "", "5454", "Cristina Gonzaga", "cgonzaga@ayudate.com", "C", 0), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0));
+        //vTicket = new Ticket(idTicket, "Se cayo el aplicativo del sistema", "Software", "17/10/2010 12:30", "Sin Atencion", "Redes y Comunicaciones", "Incidencias/Averias", "", new Empleado(1, "cristina", "Marketing", "5678", "Creativa", "", "5454", "Cristina Gonzaga", "cgonzaga@ayudate.com", "C", 0), new Empleado(1, "yenny", "Finanzas", "1234", "Secretaria", "", "1234", "Yenny Valenzuela Leguia", "yenny44b@ayudate.com", "C", 0));
 
         return vTicket;
     }

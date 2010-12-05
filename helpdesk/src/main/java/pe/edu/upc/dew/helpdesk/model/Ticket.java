@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Ticket {
 
-    private String idTicket;
+    private int idTicket;
     private String descripcion;
     private String categoria;
     private String fechaCreacion;
@@ -17,7 +17,8 @@ public class Ticket {
     private Empleado cliente;
     private ArrayList<Comentario> comentarios;
 
-    public Ticket(String idTicket, String descripcion, String categoria, String fechaCreacion, String estado, String areaReportar, String tipoSolicitud, String fechaCierre, Empleado tecnico, Empleado cliente) {
+
+    public Ticket(int idTicket, String descripcion, String categoria, String fechaCreacion, String estado, String areaReportar, String tipoSolicitud, String fechaCierre, Empleado tecnico, Empleado cliente) {
         this.idTicket = idTicket;
         this.descripcion = descripcion;
         this.categoria = categoria;
@@ -31,7 +32,7 @@ public class Ticket {
         this.comentarios = new ArrayList<Comentario>();
     }
 
-    public Empleado getCliente() {
+      public Empleado getCliente() {
         return cliente;
     }
 
@@ -110,11 +111,11 @@ public class Ticket {
         this.fechaCreacion = fechaCreacion;
     }
 
-    public String getIdTicket() {
+    public int getIdTicket() {
         return idTicket;
     }
 
-    public void setIdTicket(String idTicket) {
+    public void setIdTicket(int idTicket) {
         this.idTicket = idTicket;
     }
 
@@ -126,11 +127,15 @@ public class Ticket {
         this.tecnico = tecnico;
     }
 
-    public String getTipoSolicitud() {
+       public String getTipoSolicitud() {
         return tipoSolicitud;
     }
 
     public void setTipoSolicitud(String tipoSolicitud) {
         this.tipoSolicitud = tipoSolicitud;
     }
+
+
+
+
 }
