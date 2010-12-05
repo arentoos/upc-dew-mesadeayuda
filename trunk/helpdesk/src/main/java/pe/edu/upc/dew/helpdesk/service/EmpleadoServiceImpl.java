@@ -15,6 +15,10 @@ public class EmpleadoServiceImpl implements EmpleadoService {
         // BANDEJA: se deben cargar los tickets que tenga asignado el empleado!
         Empleado empleado = empleadoDao.getEmpleadoPorLoginName(login);
 
+        empleado.getTickets();
+
+        // tenemos que gargar los tickes en un array
+
 //        Ticket ticket = null;
 //
 //        Empleado empleado = null;
