@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import pe.edu.upc.dew.helpdesk.model.Empleado;
-//import pe.edu.upc.dew.helpdesk.model.Ticket;
 import pe.edu.upc.dew.helpdesk.service.EmpleadoService;
 import pe.edu.upc.dew.helpdesk.service.TicketService;
 //import pe.edu.upc.dew.helpdesk.service.EmpleadoServiceImpl;
