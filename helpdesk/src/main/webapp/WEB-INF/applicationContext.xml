@@ -10,4 +10,7 @@
   <bean id="ticketService" class="pe.edu.upc.dew.helpdesk.service.TicketServiceImpl">
   </bean>
 
+  <bean id="bandejaClienteService" class="pe.edu.upc.dew.helpdesk.service.BandejaClienteServiceImpl">
+  </bean>
+
 </beans>

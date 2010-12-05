@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
         
         this.pEmpleadoService = (EmpleadoService) context.getBean("empleadoService");
         this.pTicketService = (TicketService) context.getBean("ticketService");
+
     }
 
     @Override
@@ -56,6 +57,8 @@ public class LoginServlet extends HttpServlet {
 
         // Setear el model para el view
         vSesion.setAttribute("empleado", empleado);
+
+
 
         // SE DEBE REDIRIGIR mirando el tipo de empleado
         if (empleado.getLogin().equals("yenny") == true) {

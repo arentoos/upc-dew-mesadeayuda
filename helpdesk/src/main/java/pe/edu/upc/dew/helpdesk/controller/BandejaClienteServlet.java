@@ -4,9 +4,11 @@
  */
 
 package pe.edu.upc.dew.helpdesk.controller;
-
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +22,18 @@ import pe.edu.upc.dew.helpdesk.service.BandejaClienteServiceImpl;
  * @author Carlos Zegarra
  */
 public class BandejaClienteServlet extends HttpServlet {
-   
+
+    private BandejaClienteService pBandejaClienteService;
+
+    @Override
+    public void init(ServletConfig config) throws ServletException {
+
+        ApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(config.getServletContext());
+
+        this.pBandejaClienteService = (BandejaClienteService) context.getBean("bandejaClienteService");
+
+
+    }
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,9 +43,9 @@ public class BandejaClienteServlet extends HttpServlet {
         String vIdTicket = request.getParameter("idticket");
 
         // Llamar al model
-        BandejaClienteService vBandejaService = new BandejaClienteServiceImpl();
+       // BandejaClienteService vBandejaService = new BandejaClienteServiceImpl();
 
-        Ticket vTicket = vBandejaService.ObtenerTicket(vIdTicket);
+        Ticket vTicket = pBandejaClienteService.ObtenerTicket(vIdTicket);
 
         // Setear el model para el view
         request.setAttribute("ticket", vTicket);
