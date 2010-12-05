@@ -5,8 +5,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+//import pe.edu.upc.dew.helpdesk.model.Comentario;
 import pe.edu.upc.dew.helpdesk.model.Empleado;
 import pe.edu.upc.dew.helpdesk.model.Ticket;
 import pe.edu.upc.dew.helpdesk.util.JdbcUtils;
@@ -28,44 +30,73 @@ public class TicketDaoJdbc implements TicketDao {
         }
     }
 
-     public void llenarTicket(String loginName) {
 
+    public Ticket detalleTicket(String idTicket) {
 
         Connection conn = JdbcUtils.getConnection();
 
         try {
             Statement st = conn.createStatement();
 
-            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from ticket where idAnalista='" + loginName + "' or idCliente='" + loginName + "'");
+            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from Ticket where idTicket='" + idTicket + "'");
 
-            //ResultSet rs2= st.executeQuery("Select tipoEmpleado,idEmpleado from empleado");
+           if (rs.next()){
 
-            if (rs.next()) {
-                Empleado empleado = new Empleado();
-                Ticket ticket = new Ticket();
+               EmpleadoDao empleadodao= new EmpleadoDaoJdbc();
+               Ticket ticket = new Ticket(Integer.parseInt(rs.getString("idTicket")),
+                                            rs.getString("descripcion"),
+                                            rs.getString("idCategoria"),
+                                            rs.getString("fechaCreacion"),
+                                            rs.getString("idEstado"),
+                                            rs.getString("idAreaAReportar"),
+                                            rs.getString("idTipoSolicitud"),
+                                            rs.getString("fechaCierre"),
+                                            empleadodao.getEmpleadoXid(rs.getString("idAnalista")),
+                                            empleadodao.getEmpleadoXid(rs.getString("idCliente")));
 
-                // nombre de la columna
-                ticket.setIdTicket(Integer.parseInt(rs.getString("idTicket")));
-                ticket.setDescripcion(rs.getString("descripcion"));
-                ticket.setCategoria(rs.getString("idCategoria"));
-                ticket.setFechaCreacion(rs.getString("fechaCreacion"));
-                ticket.setEstado(rs.getString("idEstado"));
-               // ticket.setTecnico(rs.getString("idTecnico"));
-               // ticket.setCliente(rs.getString("idCliente"));
-                ticket.setAreaReportar(rs.getString("idAreaAReportar"));
-                ticket.setTipoSolicitud(rs.getString("idTipoSolicitud"));
-                ticket.setFechaCierre(rs.getString("fechaCierre"));
-
-                ticket.setCliente(empleado);
-                ticket.setTecnico(empleado);
-
-                return ticket;
+                 return ticket;
             }
 
         } catch (SQLException ex) {
             Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
         }
-     
+        return null;
+    }
+
+     public ArrayList<Ticket> getTicketsPorIdCliente(String idCliente) {
+
+        Connection conn = JdbcUtils.getConnection();
+
+        try {
+            Statement st = conn.createStatement();
+
+            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from Ticket where idCliente='" + idCliente + "'");
+
+            ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+
+            while (rs.next()) {
+
+                EmpleadoDao empleadodao= new EmpleadoDaoJdbc();
+
+                Ticket ticket = new Ticket(Integer.parseInt(rs.getString("idTicket")),
+                                            rs.getString("descripcion"),
+                                            rs.getString("idCategoria"),
+                                            rs.getString("fechaCreacion"),
+                                            rs.getString("idEstado"),
+                                            rs.getString("idAreaAReportar"),
+                                            rs.getString("idTipoSolicitud"),
+                                            rs.getString("fechaCierre"),
+                                            empleadodao.getEmpleadoXid(rs.getString("idAnalista")),
+                                            empleadodao.getEmpleadoXid(rs.getString("idCliente")));
+
+                listaTickets.add(ticket);
+            }
+            return listaTickets;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
     }
 
 }

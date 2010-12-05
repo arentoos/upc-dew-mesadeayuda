@@ -13,6 +13,24 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
 
     public Empleado getEmpleadoPorLoginName(String loginName) {
 
+        try {
+
+            Empleado empleado = getEmpleado(loginName);
+
+            TicketDao ticketdao = new TicketDaoJdbc();
+
+            empleado.setTickets(ticketdao.getTicketsPorIdCliente(String.valueOf(empleado.getIdEmpleado())));
+
+            return empleado;
+
+        } catch (Exception ex) {
+            Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    public Empleado getEmpleado(String loginName) {
+
         Connection conn = JdbcUtils.getConnection();
 
         try {
@@ -35,7 +53,7 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
                 empleado.setTipoEmpleado(rs.getString("tipoEmpleado"));
                 empleado.setJefe(rs.getString("jefe"));
                 empleado.setClave(rs.getString("clave"));
-                
+
                 return empleado;
             }
 
@@ -45,5 +63,38 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
         return null;
     }
 
+     public Empleado getEmpleadoXid(String idEmpleado) {
+
+        Connection conn = JdbcUtils.getConnection();
+
+        try {
+            Statement st = conn.createStatement();
+
+            ResultSet rs = st.executeQuery("select idEmpleado, login, nombre, area, cargo, email, anexo, tipoEmpleado, jefe, nivelSoporte, clave from Empleado where idEmpleado ='" + idEmpleado + "'");
+
+            if (rs.next()) {
+
+                Empleado empleado = new Empleado();
+
+                // nombre de la columna
+                empleado.setIdEmpleado(Integer.parseInt(rs.getString("idEmpleado")));
+                empleado.setLogin(rs.getString("login"));
+                empleado.setNombre(rs.getString("nombre"));
+                empleado.setArea(rs.getString("area"));
+                empleado.setCargo(rs.getString("cargo"));
+                empleado.setEmail(rs.getString("email"));
+                empleado.setAnexo(rs.getString("anexo"));
+                empleado.setTipoEmpleado(rs.getString("tipoEmpleado"));
+                empleado.setJefe(rs.getString("jefe"));
+                empleado.setClave(rs.getString("clave"));
+
+                return empleado;
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 
 }
