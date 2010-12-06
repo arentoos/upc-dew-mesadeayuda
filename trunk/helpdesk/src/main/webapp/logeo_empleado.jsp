@@ -78,7 +78,7 @@ function valida(F) {
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<p class="date">Oct<b>19</b></p>
+						<p class="date">Dic<b>10</b></p>
 						<blockquote>
 						  <blockquote>
                                                 <h2 class="title">Ingreso al Sistema de Helpdesk</h2>
@@ -92,20 +92,19 @@ function valida(F) {
 						          <blockquote>
 						            <p>&nbsp;</p>
                                                             <form id="form1" method="post" action="Login" onsubmit="return valida(this)" >
-						            <table width="200" border="0">
-						              <tr>
-						                <td id="letrasTablas">Usuario</td>
-						                <td>&nbsp;</td>
-						                <td><input name="login" type="text" id="txtUsuario" value="" /></td>
-					                  </tr>
-						              <tr>
-						                <td id="letrasTablas">Contraseña</td>
-						                <td>&nbsp;</td>
-						                <td><input name="clave" type="password" id="txtPassword" value="" /></td>
-					                  </tr>
-					                </table>
-						            
-						          </blockquote>
+						               <table width="200" border="0">
+						               <tr>
+						               <td id="letrasTablas">Usuario</td>
+						               <td>&nbsp;</td>
+						               <td><input name="login" type="text" id="txtUsuario" value="" /></td>
+					                       </tr>
+						               <tr>
+						               <td id="letrasTablas">Contraseña</td>
+						               <td>&nbsp;</td>
+						               <td><input name="clave" type="password" id="txtPassword" value="" /></td>
+					                       </tr>
+					                       </table>
+						           </blockquote>
 					            </blockquote>
 				          </blockquote>
 				        </blockquote>
