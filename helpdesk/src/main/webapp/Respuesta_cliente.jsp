@@ -54,7 +54,7 @@ Description: A two-column web design, best for your personal and business bloggi
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<p class="date">Oct<b>19</b></p>
+						<p class="date">Dic<b>10</b></p>
 						<blockquote>
 						  <blockquote>
 						    <h2 class="title">&nbsp;</h2>

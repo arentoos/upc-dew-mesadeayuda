@@ -78,7 +78,7 @@ function valida(F) {
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<p class="date">Oct<b>19</b></p>
+						<p class="date">Dic<b>10</b></p>
 				    <blockquote>
 						  <blockquote>
 						    <h2 class="title">Creación de  ticket</h2>
