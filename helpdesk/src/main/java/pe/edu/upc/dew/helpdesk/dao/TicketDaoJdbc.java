@@ -99,4 +99,43 @@ public class TicketDaoJdbc implements TicketDao {
         return null;
     }
 
+     public ArrayList<Ticket> getTicketsPorIdAnalista(String idAnalista) {
+
+        Connection conn = JdbcUtils.getConnection();
+
+        try {
+            Statement st = conn.createStatement();
+
+            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from Ticket where idAnalista='" + idAnalista + "'");
+
+            ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
+
+            while (rs.next()) {
+
+                EmpleadoDao empleadodao= new EmpleadoDaoJdbc();
+
+                Ticket ticket = new Ticket(Integer.parseInt(rs.getString("idTicket")),
+                                            rs.getString("descripcion"),
+                                            rs.getString("idCategoria"),
+                                            rs.getString("fechaCreacion"),
+                                            rs.getString("idEstado"),
+                                            rs.getString("idAreaAReportar"),
+                                            rs.getString("idTipoSolicitud"),
+                                            rs.getString("fechaCierre"),
+                                            empleadodao.getEmpleadoXid(rs.getString("idAnalista")),
+                                            empleadodao.getEmpleadoXid(rs.getString("idCliente")));
+
+                listaTickets.add(ticket);
+            }
+            return listaTickets;
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+
+
+
 }
