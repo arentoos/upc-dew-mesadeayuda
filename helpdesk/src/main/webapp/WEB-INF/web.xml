@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <display-name>helpdesk</display-name>
-
     <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>/WEB-INF/applicationContext.xml</param-value>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
-
     <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>pe.edu.upc.dew.helpdesk.controller.LoginServlet</servlet-class>
@@ -27,6 +24,10 @@
         <servlet-name>BandejaTecnicoServlet</servlet-name>
         <servlet-class>pe.edu.upc.dew.helpdesk.controller.BandejaTecnicoServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ComentarioServlet</servlet-name>
+        <servlet-class>pe.edu.upc.dew.helpdesk.controller.ComentarioServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -42,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>CreaTicketServlet</servlet-name>
         <url-pattern>/CreaTicket</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComentarioServlet</servlet-name>
+        <url-pattern>/ComentarioServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

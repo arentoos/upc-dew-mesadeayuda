@@ -50,7 +50,9 @@ public class BandejaClienteServlet extends HttpServlet {
         // Setear el model para el view
         request.setAttribute("ticket", vTicket);
 
+
         request.getRequestDispatcher("DetalleTicket_cliente.jsp").forward(request, response);
+
     }
 
     @Override

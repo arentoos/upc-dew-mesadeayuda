@@ -14,6 +14,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 import pe.edu.upc.dew.helpdesk.model.Empleado;
+import pe.edu.upc.dew.helpdesk.model.Ticket;
+import pe.edu.upc.dew.helpdesk.service.ComentarioService;
 import pe.edu.upc.dew.helpdesk.service.EmpleadoService;
 import pe.edu.upc.dew.helpdesk.service.TicketService;
 //import pe.edu.upc.dew.helpdesk.service.EmpleadoServiceImpl;
@@ -22,12 +24,14 @@ public class LoginServlet extends HttpServlet {
 
     private EmpleadoService pEmpleadoService;
     private TicketService pTicketService;
+    private ComentarioService pComentarioService;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
 
         ApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(config.getServletContext());
-        
+
+        this.pComentarioService = (ComentarioService) context.getBean("comentarioService");
         this.pEmpleadoService = (EmpleadoService) context.getBean("empleadoService");
         this.pTicketService = (TicketService) context.getBean("ticketService");
 
@@ -47,6 +51,9 @@ public class LoginServlet extends HttpServlet {
 
             CrearTicket(req);
         }
+        if (operacion.equals("crearComentario") == true) {
+            CrearComentario(req);
+        }
 
         // Recuperamos datos del view
         String login = req.getParameter("login");
@@ -57,8 +64,6 @@ public class LoginServlet extends HttpServlet {
 
         // Setear el model para el view
         vSesion.setAttribute("empleado", empleado);
-
-
 
         // SE DEBE REDIRIGIR mirando el tipo de empleado
         if (empleado.getLogin().equals("yenny") == true) {
@@ -82,6 +87,7 @@ public class LoginServlet extends HttpServlet {
 
             out.println("El usuario " + login + " no esta registrado");
         }
+
 
     }
 
@@ -125,6 +131,36 @@ public class LoginServlet extends HttpServlet {
         builder = builder.append(req.getParameter("listCategoria2"));
 
         this.pTicketService.insertaTicket(builder.toString());
+    }
+
+    private void CrearComentario(HttpServletRequest req) {
+
+        // obtengo la sesion
+        HttpSession session = req.getSession();
+
+        StringBuilder builder = new StringBuilder();
+   
+        String idAnalista = "1"; // CZ
+
+        // obtengo el id del cliente de la sesion
+        Empleado cliente = (Empleado) session.getAttribute("empleado");
+
+        // obtengo el id del Ticket
+        Ticket ticket = (Ticket) session.getAttribute("ticket");
+
+        String idTicket="8";
+        String idCliente = "2"; // Por default siempre es Roberto (uno que aumente)
+//        if (cliente != null) {
+//            idCliente = String.valueOf(cliente.getIdEmpleado());
+//        }
+
+        //( fechaCreacion, descripcion, idCliente, idTIcket)
+        builder = builder.append("'").append(getDateTime()).append("', ");
+        builder = builder.append("'").append(req.getParameter("txtDescrip")).append("', ");
+        builder = builder.append(idCliente).append(", ");
+        builder = builder.append(idTicket);
+
+        this.pComentarioService.insertaComentario(builder.toString());
     }
 
     private String getDateTime() {

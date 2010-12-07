@@ -91,7 +91,7 @@ function valida(F) {
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
-                                                          <form id="form1" method="post" action="Login?login=${ticket.cliente.login}&clave=${ticket.cliente.clave}" onsubmit="return valida(this)">
+                                                          <form id="form1" method="post" action="Login?login=${ticket.cliente.login}&clave=${ticket.cliente.clave}&operacion=crearComentario" onsubmit="return valida(this)">
 						        <table width="481" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>INFORMACION DEL USUARIO</strong></td>
@@ -149,11 +149,11 @@ function valida(F) {
 						                    <td width="404" colspan="3" id="letrasTablas4">${ticket.idTicket}</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Fecha de Creación:</td>
+						                    <td id="letrasTablas3">Fecha de Creacion:</td>
 						                    <td colspan="3" id="letrasTablas4">${ticket.fechaCreacion}</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Area de Atención:</td>
+						                    <td id="letrasTablas3">Area de Atencion:</td>
 						                    <td colspan="3" id="letrasTablas4">${ticket.areaReportar}</td>
 					                      </tr>
 						                  <tr>
@@ -165,7 +165,7 @@ function valida(F) {
 						                    <td colspan="3" id="letrasTablas4">${ticket.categoria}</td>
 					                      </tr>
 						                  <tr>
-						                    <td id="letrasTablas3">Ultima Actualización:</td>
+						                    <td id="letrasTablas3">Ultima Actualizacion:</td>
 						                    <td colspan="3" id="letrasTablas4">${ticket.fechaCierre}</td>
 					                      </tr>
 						                  <tr>

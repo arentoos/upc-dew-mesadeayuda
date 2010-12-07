@@ -13,7 +13,8 @@
   <bean id="bandejaClienteService" class="pe.edu.upc.dew.helpdesk.service.BandejaClienteServiceImpl">
   </bean>
 
-        <bean id="bandejaTecnicoService" class="pe.edu.upc.dew.helpdesk.service.BandejaTecnicoServiceImpl">
+  <bean id="bandejaTecnicoService" class="pe.edu.upc.dew.helpdesk.service.BandejaTecnicoServiceImpl">
   </bean>
-
+  <bean id="comentarioService" class="pe.edu.upc.dew.helpdesk.service.ComentarioServiceImpl">
+  </bean>
 </beans>
