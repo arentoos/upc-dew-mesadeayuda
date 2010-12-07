@@ -28,7 +28,7 @@ public class ComentarioDaoJdbc implements ComentarioDao {
 
             st.executeUpdate(query);
         } catch (SQLException ex) {
-            Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ComentarioDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

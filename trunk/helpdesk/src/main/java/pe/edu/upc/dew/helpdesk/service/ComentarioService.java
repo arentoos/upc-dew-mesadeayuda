@@ -9,6 +9,7 @@ package pe.edu.upc.dew.helpdesk.service;
  *
  * @author cgonzagah
  */
-public class ComentarioService {
+public interface ComentarioService {
 
+public void insertaComentario(String string);
 }
