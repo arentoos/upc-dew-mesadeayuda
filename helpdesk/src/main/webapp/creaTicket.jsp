@@ -41,6 +41,10 @@ function valida(F) {
         }
 }
 
+var area_12=new Array("-","Hardware","Software","Plataforma")
+var area_11=new Array("-","Cali","Santamarta","Medellin","Cartagena","...")
+var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","...")
+
 </script>
 </head>
 <body>
@@ -155,7 +159,7 @@ function valida(F) {
 						                <td>
 						                  <p>
 						                    <label for="listCategoria"></label>
-						                    <select name="listCategoria" id="listCategoria">
+						                    <select name="listCategoria" id="listCategoria" onchange="cambia_area()">
 						                      <option value="12">Soporte Tecnologico</option>
 						                      <option value="11">Desarrollo de Software</option>
 						                      <option value="13">Redes y Comunicaciones</option>
@@ -167,12 +171,11 @@ function valida(F) {
 						                <td align="right" id="letrasTablas">Categoria:</td>
 						                <td>
 						                  <p>
+
 						                    <label for="listCategoria"></label>
 						                    <select name="listCategoria2" id="listCategoria" >
-						                      <option value="15">Hardware</option>
-						                      <option value="16">Software</option>
-                                                                      <option value="17">Plataforma </option>
-
+						                      <option value="-">-</option>
+						                      
 					                        </select>
 					                      </p>
 					                   </td>
