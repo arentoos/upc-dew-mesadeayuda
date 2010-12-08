@@ -61,4 +61,20 @@ public class ComentarioDaoJdbc implements ComentarioDao {
         }
         return null;
     }
+
+    public void updateEstadoTicket(String idTicket, String estado) {
+
+        Connection conn = JdbcUtils.getConnection();
+
+        try {
+            Statement st = conn.createStatement();
+
+            String query = "update Ticket set idEstado = " + estado + " where idTicket = " + idTicket;
+
+            st.executeUpdate(query);
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ComentarioDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

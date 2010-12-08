@@ -18,6 +18,7 @@ import pe.edu.upc.dew.helpdesk.model.Ticket;
 import pe.edu.upc.dew.helpdesk.service.ComentarioService;
 import pe.edu.upc.dew.helpdesk.service.EmpleadoService;
 import pe.edu.upc.dew.helpdesk.service.TicketService;
+import pe.edu.upc.dew.helpdesk.service.TicketServiceImpl;
 //import pe.edu.upc.dew.helpdesk.service.EmpleadoServiceImpl;
 
 public class LoginServlet extends HttpServlet {
@@ -141,9 +142,26 @@ public class LoginServlet extends HttpServlet {
         StringBuilder builder = new StringBuilder();
        
         // obtengo el id del cliente de la sesion
-        Empleado idempleado = (Empleado) session.getAttribute("empleado");
+        Empleado empleado = (Empleado) session.getAttribute("empleado");
 
-        int idCliente = idempleado.getIdEmpleado();
+        // obtenemos es ticket
+        Ticket ticket = (Ticket) session.getAttribute("ticket");
+
+        if (empleado.getTipoEmpleado().equals("C")) {
+
+            TicketService service = new TicketServiceImpl();
+
+            if (ticket.getEstado().equals("Resuelto")) {
+
+                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "6");
+
+            } else if (ticket.getEstado().equals("esperando Respuesta")) {
+
+                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
+            }
+        }
+
+        int idCliente = empleado.getIdEmpleado();
 
         //( fechaCreacion, descripcion, idCliente, idTIcket)
         builder = builder.append("'").append(getDateTime()).append("', ");
