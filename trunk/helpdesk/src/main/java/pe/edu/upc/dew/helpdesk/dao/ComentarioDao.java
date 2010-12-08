@@ -17,4 +17,6 @@ public interface ComentarioDao {
 
     public ArrayList<Comentario> getComentarios(String idTicket);
 
+    public void updateEstadoTicket(String idTicket, String estado);
+
 }

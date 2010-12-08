@@ -203,7 +203,7 @@ function valida(F) {
                                                                           <p>
 
 						                       
-                                                                              <select name="cmdConfirmar" id="cmdConfirmar" <c:if test="${ticket.estado=='Resuelto'}">disabled="true"</c:if> >
+                                                                              <select name="cmdConfirmar" id="cmdConfirmar" <c:if test="${ticket.estado!='Resuelto'}">disabled="disabled"</c:if> >
                                                                                   
                                                                             <option  value="0" >Aceptar</option>
                                                                             <option  value="1" >Rechazar</option>
