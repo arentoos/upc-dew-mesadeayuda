@@ -122,13 +122,13 @@ public class LoginServlet extends HttpServlet {
         //(descripcion, idCategoria, fechaCreacion, idEstado, idAnalista, idCliente, idAreaAReportar, idTipoSolicitud, fechaCierre)
 
         builder = builder.append("'").append(req.getParameter("txtdescripcion")).append("', ");
-        builder = builder.append(req.getParameter("listArea")).append(", ");
+        builder = builder.append(req.getParameter("listCategoria")).append(", ");
         builder = builder.append("'").append(getDateTime()).append("', ");
         builder = builder.append(idEstado).append(", ");
         builder = builder.append(idAnalista).append(", ");
         builder = builder.append(idCliente).append(", ");
-        builder = builder.append(req.getParameter("listCategoria")).append(", ");
-        builder = builder.append(req.getParameter("listCategoria2"));
+        builder = builder.append(req.getParameter("listArea")).append(", ");
+        builder = builder.append(req.getParameter("listSolicitud"));
 
         this.pTicketService.insertaTicket(builder.toString());
     }

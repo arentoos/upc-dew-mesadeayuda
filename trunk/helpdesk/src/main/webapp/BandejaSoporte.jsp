@@ -117,7 +117,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						        <table border="2" width="480" cellpadding="0" cellspacing="0" >
     <tr>
                 <td width="28" align="center" id="letrasTablas">ID</td>
-                <td width="57" align="center" id="letrasTablas">Tipo</td>
+                <td width="57" align="center" id="letrasTablas">Tipo Solicitud</td>
                 <td width="66" align="center" id="letrasTablas">Usuario</td>
                 <td width="56" align="center" id="letrasTablas">Descripcion</td>
                 <td width="47" align="center" id="letrasTablas">Persona de Soporte</td>
@@ -129,7 +129,7 @@ Description: A two-column web design, best for your personal and business bloggi
 
         <tr>
             <td><a href="BandejaTecnico?idticket=${ticket.idTicket}" >${ticket.idTicket}</a></td>
-            <td> ${ticket.tipoSolicitud}<br/></td>
+            <td> ${ticket.categoria}<br/></td>
             <td> ${ticket.tecnico.nombre}</td>
             <td> ${ticket.descripcion}</td>
             <td> ${ticket.cliente.nombre}<br/></td>
