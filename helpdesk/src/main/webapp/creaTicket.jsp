@@ -41,9 +41,47 @@ function valida(F) {
         }
 }
 
-var area_12=new Array("-","Hardware","Software","Plataforma")
-var area_11=new Array("-","Cali","Santamarta","Medellin","Cartagena","...")
-var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","...")
+var subarea_12=new Array("-","Hardware","Software","Plataforma")
+var codsubarea_12=new Array("-","15","16","17")
+var subarea_11=new Array("-","Aplicativo Cliente","Aplicativo Factura","Aplicativo CRM")
+var codsubarea_11=new Array("-","21","24","25")
+var subarea_13=new Array("-","Problemas Conectividad","Permisos","pase a Produccion")
+var codsubarea_13=new Array("-","18","19","20")
+
+
+function cambia_area(){
+    //tomo el valor del select del pais elegido
+    var area
+    
+    alert("pasa hasta aqui")
+    area = document.form1.listArea[document.form1.listArea.selectedIndex].value
+    
+    //miro a ver si el pais está definido
+    if (area != 0) {
+       //si estaba definido, entonces coloco las opciones de la provincia correspondiente.
+       //selecciono el array de provincia adecuado
+       mis_subareas=eval("subarea_" + area)
+       mis_codsubarea=eval("codsubarea_" + area)
+       //calculo el numero de provincias
+       mis_subareas= mis_subareas.length
+       //marco el número de provincias en el select
+       document.form1.listCategoria2.length = num_subareas
+       //para cada provincia del array, la introduzco en el select
+       for(i=0;i<num_subareas;i++){
+          document.form1.listCategoria2.options[i].value=mis_codsubarea[i]
+          document.form1.listCategoria2.options[i].text=mis_subarea[i]
+       }
+    }else{
+       //si no había provincia seleccionada, elimino las provincias del select
+       document.form1.listCategoria2.length = 1
+       //coloco un guión en la única opción que he dejado
+       document.form1.listCategoria2.options[0].value = "-"
+       document.form1.listCategoria2.options[0].text = "-"
+    }
+    //marco como seleccionada la opción primera de provincia
+    document.form1.listCategoria2.options[0].selected = true
+}
+
 
 </script>
 </head>
@@ -91,7 +129,7 @@ var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","..."
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
-                                                          <form id="form1" method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}&operacion=crearTicket" onsubmit="return valida(this)">
+                                                     <form  id="form1"  method="post" action="Login?login=${empleado.login}&clave=${empleado.clave}&operacion=crearTicket" onsubmit="return valida(this)">
 						        <table width="500" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="4" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL CLIENTE</strong></td>
@@ -142,11 +180,11 @@ var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","..."
 
 <table width="500" border="1" align="center" cellpadding="0" cellspacing="0">
 						              <tr>
-						                <td  width="90" align="right" id="letrasTablas"> Asunto:</td>
+						                <td  width="90" align="right" id="letrasTablas"> Tipo Solicitud:</td>
 						                <td width="500">
 						                  <p>
-						                    <label for="listArea"></label>
-						                    <select name="listArea" id="listArea">
+						                    <label for="listcategoria"></label>
+						                    <select name="listSolicitud" id="listSolicitud">
 						                      <option value="8">Incidencias</option>
 						                      <option value="9">Requerimientos</option>
 						                      <option value="10">Consultas</option>
@@ -158,8 +196,8 @@ var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","..."
 						                <td align="right" id="letrasTablas">Area:</td>
 						                <td>
 						                  <p>
-						                    <label for="listCategoria"></label>
-						                    <select name="listCategoria" id="listCategoria" onchange="cambia_area()">
+						                    <label for="listArea"></label>
+                                                                    <select name="listArea" id="listArea">
 						                      <option value="12">Soporte Tecnologico</option>
 						                      <option value="11">Desarrollo de Software</option>
 						                      <option value="13">Redes y Comunicaciones</option>
@@ -172,9 +210,11 @@ var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","..."
 						                <td>
 						                  <p>
 
-						                    <label for="listCategoria"></label>
-						                    <select name="listCategoria2" id="listCategoria" >
-						                      <option value="-">-</option>
+						                    <label for="listTipo"></label>
+						                    <select name="listCategoria" id="listCategoria" >
+						                       <option value="15">Hardware</option>
+						                      <option value="16">Software</option>
+						                      <option value="17">Plataforma</option>
 						                      
 					                        </select>
 					                      </p>
@@ -217,10 +257,11 @@ var area_13=new Array("-","Aisne","Creuse","Dordogne","Essonne","Gironde ","..."
 					          </blockquote>
 							    <p>&nbsp;</p>
 						    </blockquote>
-					      </form>
+					  
 						  <p>&nbsp;</p>
 				      </div>
 					</div>
+                                                                  </form>
 					<div class="post">
 						<p>&nbsp;</p>
 						<h2 class="title"><br />
