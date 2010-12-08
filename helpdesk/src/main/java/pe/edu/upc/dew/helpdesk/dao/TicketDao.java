@@ -7,6 +7,7 @@ public interface TicketDao {
 
     public void insertTicket(String string);
     public ArrayList<Ticket> getTicketsPorIdCliente(String idCliente);
+    public ArrayList<Ticket> getTicketsPorIdAnalista(String idAnalista);
     public Ticket detalleTicket(String idTicket);
 
 }

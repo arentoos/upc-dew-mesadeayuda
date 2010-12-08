@@ -195,7 +195,7 @@ function valida(F) {
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Ticket:</td>
-						                    <td colspan="3" id="letrasTablas4">${ticket.idTicket}</td>
+						                    <td colspan="3" id="letrasTablas4"><input type="text" readonly="false" name="txtidTicket" id="txtidTicket" value="${ticket.idTicket}"/></td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Fecha Creacion:</td>

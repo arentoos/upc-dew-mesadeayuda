@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
             CrearTicket(req);
         }
         if (operacion.equals("crearComentario") == true) {
+
             CrearComentario(req);
         }
 
@@ -134,31 +135,22 @@ public class LoginServlet extends HttpServlet {
     }
 
     private void CrearComentario(HttpServletRequest req) {
-
         // obtengo la sesion
         HttpSession session = req.getSession();
 
         StringBuilder builder = new StringBuilder();
-   
-        String idAnalista = "1"; // CZ
-
+       
         // obtengo el id del cliente de la sesion
-        Empleado cliente = (Empleado) session.getAttribute("empleado");
+        Empleado idempleado = (Empleado) session.getAttribute("empleado");
 
-        // obtengo el id del Ticket
-        Ticket ticket = (Ticket) session.getAttribute("ticket");
-
-        String idTicket="8";
-        String idCliente = "2"; // Por default siempre es Roberto (uno que aumente)
-//        if (cliente != null) {
-//            idCliente = String.valueOf(cliente.getIdEmpleado());
-//        }
+        int idCliente = idempleado.getIdEmpleado();
 
         //( fechaCreacion, descripcion, idCliente, idTIcket)
         builder = builder.append("'").append(getDateTime()).append("', ");
         builder = builder.append("'").append(req.getParameter("txtDescrip")).append("', ");
         builder = builder.append(idCliente).append(", ");
-        builder = builder.append(idTicket);
+         //builder = builder.append(idTicket);
+        builder = builder.append("'").append(req.getParameter("txtidTicket")).append("' ");
 
         this.pComentarioService.insertaComentario(builder.toString());
     }
