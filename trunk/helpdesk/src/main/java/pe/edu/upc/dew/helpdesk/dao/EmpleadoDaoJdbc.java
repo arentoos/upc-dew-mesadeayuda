@@ -16,10 +16,16 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
         try {
 
             Empleado empleado = getEmpleado(loginName);
+             TicketDao ticketdao = new TicketDaoJdbc();
 
-            TicketDao ticketdao = new TicketDaoJdbc();
-
+            if(empleado.getTipoEmpleado().equals("A")){
+              empleado.setTickets(ticketdao.getTicketsPorIdAnalista(String.valueOf(empleado.getIdEmpleado())));
+            }else{
+            
             empleado.setTickets(ticketdao.getTicketsPorIdCliente(String.valueOf(empleado.getIdEmpleado())));
+            }
+
+                   
 
             return empleado;
 

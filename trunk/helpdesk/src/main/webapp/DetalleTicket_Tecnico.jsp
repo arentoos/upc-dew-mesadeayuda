@@ -94,7 +94,7 @@ function valida(F) {
 					  <div class="entry">
 					    <blockquote>
 						      <blockquote>
-                                                         <form id="form1" method="post" action="Login?login=${ticket.tecnico.login}&clave=${ticket.tecnico.clave}" onsubmit="return valida(this)">
+                                                         <form id="form1" method="post" action="Login?login=${ticket.tecnico.login}&clave=${ticket.tecnico.clave}&operacion=crearComentario" onsubmit="return valida(this)">
 						        <table width="481" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL CLIENTE</strong></td>
