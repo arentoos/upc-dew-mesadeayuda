@@ -38,8 +38,7 @@ public class TicketDaoJdbc implements TicketDao {
         try {
             Statement st = conn.createStatement();
 
-            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from Ticket where idTicket='" + idTicket + "'");
-
+             ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria = CAT.nombre,fechaCreacion,idEstado = EST.nombre,idAnalista,idCliente,idAreaAReportar = AREA.nombre,idTipoSolicitud = TIPO.nombre,fechaCierre from Ticket T LEFT JOIN Clasificadores CAT ON T.idCategoria = CAT.IdClasificador LEFT JOIN Clasificadores EST ON T.idEstado = EST.IdClasificador LEFT JOIN Clasificadores AREA ON T.idAreaAReportar = AREA.IdClasificador LEFT JOIN Clasificadores TIPO ON T.idTipoSolicitud = TIPO.IdClasificador where idTicket='" + idTicket + "'");
            if (rs.next()){
 
                EmpleadoDao empleadodao= new EmpleadoDaoJdbc();
