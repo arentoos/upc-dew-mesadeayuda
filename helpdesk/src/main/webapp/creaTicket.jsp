@@ -168,7 +168,7 @@ function valida(F) {
 						                <td>
 						                  <p>
 						                    <label for="listCategoria"></label>
-						                    <select name="listCategoria2" id="listCategoria">
+						                    <select name="listCategoria2" id="listCategoria" >
 						                      <option value="15">Hardware</option>
 						                      <option value="16">Software</option>
                                                                       <option value="17">Plataforma </option>

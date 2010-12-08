@@ -70,7 +70,7 @@ public class TicketDaoJdbc implements TicketDao {
         try {
             Statement st = conn.createStatement();
 
-            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from Ticket where idCliente='" + idCliente + "'");
+            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria = CAT.nombre,fechaCreacion,idEstado = EST.nombre,idAnalista,idCliente,idAreaAReportar = AREA.nombre,idTipoSolicitud = TIPO.nombre,fechaCierre from Ticket T LEFT JOIN Clasificadores CAT ON T.idCategoria = CAT.IdClasificador LEFT JOIN Clasificadores EST ON T.idEstado = EST.IdClasificador LEFT JOIN Clasificadores AREA ON T.idAreaAReportar = AREA.IdClasificador LEFT JOIN Clasificadores TIPO ON T.idTipoSolicitud = TIPO.IdClasificador where idCliente = '" + idCliente + "'");
 
             ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 
@@ -106,7 +106,7 @@ public class TicketDaoJdbc implements TicketDao {
         try {
             Statement st = conn.createStatement();
 
-            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria,fechaCreacion,idEstado,idAnalista,idCliente,idAreaAReportar,idTipoSolicitud,fechaCierre from Ticket where idAnalista='" + idAnalista + "'");
+            ResultSet rs = st.executeQuery("select idTicket,descripcion,idCategoria = CAT.nombre,fechaCreacion,idEstado = EST.nombre,idAnalista,idCliente,idAreaAReportar = AREA.nombre,idTipoSolicitud = TIPO.nombre,fechaCierre from Ticket T LEFT JOIN Clasificadores CAT ON T.idCategoria = CAT.IdClasificador LEFT JOIN Clasificadores EST ON T.idEstado = EST.IdClasificador LEFT JOIN Clasificadores AREA ON T.idAreaAReportar = AREA.IdClasificador LEFT JOIN Clasificadores TIPO ON T.idTipoSolicitud = TIPO.IdClasificador where idAnalista = '" + idAnalista + "'");
 
             ArrayList<Ticket> listaTickets = new ArrayList<Ticket>();
 
