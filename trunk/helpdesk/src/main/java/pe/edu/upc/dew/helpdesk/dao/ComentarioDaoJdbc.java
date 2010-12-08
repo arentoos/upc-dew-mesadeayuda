@@ -24,7 +24,7 @@ public class ComentarioDaoJdbc implements ComentarioDao {
         try {
             Statement st = conn.createStatement();
 
-            String query = "INSERT INTO Comentario (fecha, comentario, idTicket, idEmpleado)" + "VALUES (" + string + ")";
+            String query = "INSERT INTO Comentario (fecha, comentario, idEmpleado, idTicket)" + " VALUES (" + string + ")";
 
             st.executeUpdate(query);
         } catch (SQLException ex) {
