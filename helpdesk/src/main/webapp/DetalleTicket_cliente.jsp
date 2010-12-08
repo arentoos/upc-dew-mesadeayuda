@@ -173,8 +173,20 @@ function valida(F) {
 						                    <td id="letrasTablas3">Descripcion Breve:</td>
 						                    <td colspan="3" id="letrasTablas4">${ticket.descripcion}</td>
 					                      </tr> <tr>
-						                    <td id="letrasTablas3">Historial:</td>
-						                    <td colspan="3" id="letrasTablas4">-</td>
+						                    <td id="letrasTablas3">Historial:       </td>
+                                                                    <td colspan="3" id="letrasTablas4">
+    
+    <c:forEach var="comentario" items="${ticket.comentarios}">
+
+      
+             ${comentario.fechaHora}  ;  ${comentario.idEmpleado.nombre} <BR>  Comentario:  ${comentario.texto} <BR>
+
+      
+
+    </c:forEach>
+
+
+						                     </td>
 					                      </tr>
 						                  <tr>
 						                    <td id="letrasTablas3">Comentarios</td>
