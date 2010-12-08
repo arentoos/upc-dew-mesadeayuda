@@ -32,7 +32,7 @@ public class Ticket {
         this.comentarios = new ArrayList<Comentario>();
     }
 
-      public Empleado getCliente() {
+    public Empleado getCliente() {
         return cliente;
     }
 

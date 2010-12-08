@@ -14,7 +14,6 @@ import pe.edu.upc.dew.helpdesk.model.Comentario;
 public interface ComentarioDao {
 
     public void insertComentario(String string);
-
     public ArrayList<Comentario> getComentarios(String idTicket);
 
     public void updateEstadoTicket(String idTicket, String estado);

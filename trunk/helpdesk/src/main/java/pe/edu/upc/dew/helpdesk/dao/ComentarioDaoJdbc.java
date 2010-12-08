@@ -10,6 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 //import pe.edu.upc.dew.helpdesk.model.Empleado;
 import pe.edu.upc.dew.helpdesk.model.Comentario;
+import pe.edu.upc.dew.helpdesk.model.Empleado;
 import pe.edu.upc.dew.helpdesk.model.Ticket;
 import pe.edu.upc.dew.helpdesk.util.JdbcUtils;
 
@@ -35,6 +36,8 @@ public class ComentarioDaoJdbc implements ComentarioDao {
             Logger.getLogger(ComentarioDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+
 
     public ArrayList<Comentario> getComentarios(String idTicket) {
 

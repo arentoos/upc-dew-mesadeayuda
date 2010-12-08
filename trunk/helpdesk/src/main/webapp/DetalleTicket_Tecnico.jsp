@@ -95,7 +95,7 @@ function valida(F) {
 					    <blockquote>
 						      <blockquote>
                                                          <form id="form1" method="post" action="Login?login=${ticket.tecnico.login}&clave=${ticket.tecnico.clave}&operacion=crearComentario" onsubmit="return valida(this)">
-						        <table width="481" border="1" cellpadding="0" cellspacing="0" class="post">
+						        <table width="479" border="1" cellpadding="0" cellspacing="0" class="post">
 						              <tr>
 						                <td colspan="2" align="center" bgcolor="#B60044" class="meta" ><strong>DATOS DEL CLIENTE</strong></td>
 				                  </tr>
@@ -141,7 +141,7 @@ function valida(F) {
 						                <td colspan="2" align="center" id="letrasTablas2"></td>
 				                  </tr>
 				                </table>
-                                                                        <div><span id="lineaSepara"><table width="482" border="1" align="center" cellpadding="0" cellspacing="0">
+                                                                        <div><span id="lineaSepara"><table width="479" border="1" align="center" cellpadding="0" cellspacing="0">
                                         <tr>
                                           <td width="413" align="center" bgcolor="#B60044" class="meta" ><strong>Informacion del area</strong></td>
                                      </tr>
@@ -155,7 +155,7 @@ function valida(F) {
 						                    <td width="194" align="center" id="letrasTablas2">
 				                            <p>
 						                    <label for="cmd_soporte"></label>
-                                                                    <select name="cmd_soporte" id="cmd_soporte">
+                                                                    <select name="cmd_soporte" id="cmd_soporte" disabled="true" >
                                                                         <option value="0" <c:if test="${ticket.areaReportar=='Soporte Tecnologico'}">selected="selected"</c:if> >Soporte Tecnologico</option>
                                                                         <option value="1" <c:if test="${ticket.areaReportar=='Desarrollo de Software'}">selected="selected"</c:if> >Desarrollo de Software</option>
                                                                         <option value="2" <c:if test="${ticket.areaReportar=='Redes y Comunicaciones'}">selected="selected"</c:if> >Redes y Comunicaciones</option>
