@@ -108,11 +108,19 @@ public class LoginServlet extends HttpServlet {
 
         // siempre será SIN ATENCION
         String idEstado = "1";
+        String idAnalista = null;
 
+        System.out.println("DATOS  -------->    " + req.getParameter("listArea"));
         // por ahora simplemente le asignare el ticket a un empleado X
         // AQUI HAY QUE HACER LA DISTRIBUCION INTELIGENTE DEL TICKET!!!
-        String idAnalista = "1"; // CZ
+        if (req.getParameter("listArea").equals("12") ){
 
+                  idAnalista = "4";
+        } else if (req.getParameter("listArea").equals("11")){
+             idAnalista = "1";
+        }else if (req.getParameter("listArea").equals("13")){
+             idAnalista = "3";
+        }
         // obtengo el id del cliente de la sesion
         Empleado cliente = (Empleado) session.getAttribute("empleado");
 
