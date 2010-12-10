@@ -169,23 +169,23 @@ public class LoginServlet extends HttpServlet {
             }
         }
 
-// else if  (empleado.getTipoEmpleado().equals("A")) {
+ else if  (empleado.getTipoEmpleado().equals("A")) {
 
-//            TicketService service = new TicketServiceImpl();
+            TicketService service = new TicketServiceImpl();
 
-//            if (ticket.getEstado().equals("Sin Atencion")) {
+            if (ticket.getEstado().equals("Sin Atencion")) {
 
-//                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
+                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
 
-//            } else if (ticket.getEstado().equals("esperando Respuesta")) {
+            } else if (ticket.getEstado().equals("esperando Respuesta")) {
 
-//                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "4");
-//              }
-//            else if (ticket.getEstado().equals("Resuelto")) {
+                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "4");
+              }
+            else if (ticket.getEstado().equals("Resuelto")) {
 
-//                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "5");
-//            }
-//        }
+                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "5");
+            }
+        }
 
         int idCliente = empleado.getIdEmpleado();
 

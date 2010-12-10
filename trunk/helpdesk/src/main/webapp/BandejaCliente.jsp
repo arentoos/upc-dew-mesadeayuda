@@ -33,7 +33,7 @@ Description: A two-column web design, best for your personal and business bloggi
               <ul>
                 <li class="current_page_item"></li>
                 <li><a href="Login"><span>inicio</span></a></li>
-                <li><a href="#"><span>ayuda</span></a></li>
+                <li><a href="Ayuda.jsp"><span>ayuda</span></a></li>
                 <li></li>
                 <li><a href="#"><span>Links</span></a></li>
                 <li><a href="#"><span>Contact</span></a></li>

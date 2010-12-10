@@ -54,7 +54,7 @@ function valida(F) {
 	<div id="menu">
 	  <ul>
 	    <li><a href="#"><span>inicio</span></a></li>
-	    <li><a href="#"><span>ayuda</span></a></li>
+	    <li><a href="Ayuda.jsp"><span>ayuda</span></a></li>
 	    <li></li>
 	    <li><a href="#"><span>Links</span></a></li>
 	    <li><a href="#"><span>Contact</span></a></li>

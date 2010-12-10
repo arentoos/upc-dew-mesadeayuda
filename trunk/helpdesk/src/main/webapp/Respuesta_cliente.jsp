@@ -69,7 +69,7 @@ Description: A two-column web design, best for your personal and business bloggi
 						            <p>&nbsp;</p>
 						            <table width="372" border="0">
 						              <tr>
-						                <td width="362" id="letrasTablas">¡ Su operacion se realizó satisfactoriamente !</td>
+						                <td width="362" id="letrasTablas"> Su operacion se realizó satisfactoriamente !</td>
 					                  </tr>
 					                </table>
 						            
