@@ -64,33 +64,23 @@ public class LoginServlet extends HttpServlet {
         // Llamar al model
         Empleado empleado = pEmpleadoService.logeo(login, clave);
 
+        if (empleado == null) {
+            
+            req.setAttribute("mensaje", "El nombre de usuario no existe");
+            req.getRequestDispatcher("logeo_empleado.jsp").forward(req, resp);
+            return;
+        }
+
         // Setear el model para el view
         vSesion.setAttribute("empleado", empleado);
 
         // SE DEBE REDIRIGIR mirando el tipo de empleado
-        if (empleado.getLogin().equals("yenny") == true) {
-
-            // Seleccionar la siguiente vista, flujo de navegacion
+        if (empleado.getTipoEmpleado().equals("C")) {
+            
             req.getRequestDispatcher("BandejaCliente.jsp").forward(req, resp);
-
-        } else if (empleado.getLogin().equals("carlos") == true) {
-
-            req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
-
-        } else if (empleado.getLogin().equals("cristina") == true) {
-
-            req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
-
-        } else if (empleado.getLogin().equals("raul") == true) {
-
-            req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
         } else {
-            PrintWriter out = resp.getWriter();
-
-            out.println("El usuario " + login + " no esta registrado");
+            req.getRequestDispatcher("BandejaSoporte.jsp").forward(req, resp);
         }
-
-
     }
 
     @Override
@@ -110,16 +100,17 @@ public class LoginServlet extends HttpServlet {
         String idEstado = "1";
         String idAnalista = null;
 
-        System.out.println("DATOS  -------->    " + req.getParameter("listArea"));
         // por ahora simplemente le asignare el ticket a un empleado X
         // AQUI HAY QUE HACER LA DISTRIBUCION INTELIGENTE DEL TICKET!!!
-        if (req.getParameter("listArea").equals("12") ){
+        if (req.getParameter("listArea").equals("12")) {
 
-                  idAnalista = "4";
-        } else if (req.getParameter("listArea").equals("11")){
-             idAnalista = "1";
-        }else if (req.getParameter("listArea").equals("13")){
-             idAnalista = "3";
+            idAnalista = "4";
+        } else if (req.getParameter("listArea").equals("11")) {
+
+            idAnalista = "1";
+        } else if (req.getParameter("listArea").equals("13")) {
+
+            idAnalista = "5";
         }
         // obtengo el id del cliente de la sesion
         Empleado cliente = (Empleado) session.getAttribute("empleado");
@@ -130,7 +121,6 @@ public class LoginServlet extends HttpServlet {
         }
 
         //(descripcion, idCategoria, fechaCreacion, idEstado, idAnalista, idCliente, idAreaAReportar, idTipoSolicitud, fechaCierre)
-
         builder = builder.append("'").append(req.getParameter("txtdescripcion")).append("', ");
         builder = builder.append(req.getParameter("listCategoria")).append(", ");
         builder = builder.append("'").append(getDateTime()).append("', ");
@@ -146,7 +136,7 @@ public class LoginServlet extends HttpServlet {
     private void CrearComentario(HttpServletRequest req) {
         // obtengo la sesion
         HttpSession session = req.getSession();
-   
+
         StringBuilder builder = new StringBuilder();
 
         // obtengo el id del cliente de la sesion
@@ -157,33 +147,41 @@ public class LoginServlet extends HttpServlet {
 
         if (empleado.getTipoEmpleado().equals("C")) {
 
-            TicketService service = new TicketServiceImpl();
-
             if (ticket.getEstado().equals("Resuelto")) {
 
-                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "6");
+                if (req.getParameter("cmdConfirmar") == null || String.valueOf(req.getParameter("cmdConfirmar")).equals("Aceptar")) {
 
-            } else if (ticket.getEstado().equals("esperando Respuesta")) {
+                    this.pTicketService.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "6");
+                } else {
+                    this.pTicketService.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
+                }
+            } else if (ticket.getEstado().equals("Esperando Respuesta")) {
 
-                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
+                this.pTicketService.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
             }
-        }
+        } else if (empleado.getTipoEmpleado().equals("A")) {
 
- else if  (empleado.getTipoEmpleado().equals("A")) {
+            String estadoPantalla = "";
 
-            TicketService service = new TicketServiceImpl();
+            // en el caso del tecnico el estado es el que esta en la pantalla
+            // se toma el vale del option: un numero q representa el estado
+            if (req.getParameter("cmdEstado") == null) {
+                estadoPantalla = ticket.getEstado();
+            } else {
+                estadoPantalla = req.getParameter("cmdEstado");
+            }
 
-            if (ticket.getEstado().equals("Sin Atencion")) {
+            if (estadoPantalla.equals("1") || estadoPantalla.equals("Sin Atencion")) {
 
-                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
+                this.pTicketService.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
 
-            } else if (ticket.getEstado().equals("esperando Respuesta")) {
+            } else if (estadoPantalla.equals("4")) {
 
-                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "4");
-              }
-            else if (ticket.getEstado().equals("Resuelto")) {
+                this.pTicketService.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "4");
 
-                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "5");
+            } else if (estadoPantalla.equals("5")) {
+
+                this.pTicketService.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "5");
             }
         }
 
@@ -193,7 +191,7 @@ public class LoginServlet extends HttpServlet {
         builder = builder.append("'").append(getDateTime()).append("', ");
         builder = builder.append("'").append(req.getParameter("txtDescrip")).append("', ");
         builder = builder.append(idCliente).append(", ");
-         //builder = builder.append(idTicket);
+        //builder = builder.append(idTicket);
         builder = builder.append("'").append(req.getParameter("txtidTicket")).append("' ");
 
         this.pComentarioService.insertaComentario(builder.toString());
