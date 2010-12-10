@@ -37,8 +37,6 @@ public class ComentarioDaoJdbc implements ComentarioDao {
         }
     }
 
-
-
     public ArrayList<Comentario> getComentarios(String idTicket) {
 
         Connection conn = JdbcUtils.getConnection();
