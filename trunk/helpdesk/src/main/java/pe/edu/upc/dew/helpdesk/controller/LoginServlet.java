@@ -146,9 +146,9 @@ public class LoginServlet extends HttpServlet {
     private void CrearComentario(HttpServletRequest req) {
         // obtengo la sesion
         HttpSession session = req.getSession();
-
+   
         StringBuilder builder = new StringBuilder();
-       
+
         // obtengo el id del cliente de la sesion
         Empleado empleado = (Empleado) session.getAttribute("empleado");
 
@@ -168,6 +168,24 @@ public class LoginServlet extends HttpServlet {
                 service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
             }
         }
+
+// else if  (empleado.getTipoEmpleado().equals("A")) {
+
+//            TicketService service = new TicketServiceImpl();
+
+//            if (ticket.getEstado().equals("Sin Atencion")) {
+
+//                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "2");
+
+//            } else if (ticket.getEstado().equals("esperando Respuesta")) {
+
+//                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "4");
+//              }
+//            else if (ticket.getEstado().equals("Resuelto")) {
+
+//                service.updateEstadoTicket(String.valueOf(ticket.getIdTicket()), "5");
+//            }
+//        }
 
         int idCliente = empleado.getIdEmpleado();
 

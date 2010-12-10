@@ -25,9 +25,9 @@ public class EmpleadoDaoJdbc implements EmpleadoDao {
             empleado.setTickets(ticketdao.getTicketsPorIdCliente(String.valueOf(empleado.getIdEmpleado())));
             }
 
-                   
 
-            return empleado;
+
+               return empleado;
 
         } catch (Exception ex) {
             Logger.getLogger(EmpleadoDaoJdbc.class.getName()).log(Level.SEVERE, null, ex);
