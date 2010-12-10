@@ -179,10 +179,10 @@ function valida(F) {
 						                      <p>
 						                        <label for="cmdEstado"></label>
 						                        <select name="cmdEstado" id="cmdEstado">
-                                                                            <option disabled="true" value="0" <c:if test="${ticket.estado=='Sin Atencion'}">selected="selected"</c:if> >Sin Atencion</option>
-                                                                            <option disabled="true" value="1" <c:if test="${ticket.estado=='Pendiente'}">selected="selected"</c:if> >Pendiente</option>
-                                                                            <option value="2" <c:if test="${ticket.estado=='Esperando Respuesta'}">selected="selected"</c:if> >Esperando Respuesta</option>
-                                                                            <option value="3" <c:if test="${ticket.estado=='Resuelto'}">selected="selected"</c:if> >Resuelto</option>
+                                                                            <option disabled="true" value="1" <c:if test="${ticket.estado=='Sin Atencion'}">selected="selected"</c:if> >Sin Atencion</option>
+                                                                            <option disabled="true" value="2" <c:if test="${ticket.estado=='Pendiente'}">selected="selected"</c:if> >Pendiente</option>
+                                                                            <option value="4" <c:if test="${ticket.estado=='Esperando Respuesta'}">selected="selected"</c:if> >Esperando Respuesta</option>
+                                                                            <option value="5" <c:if test="${ticket.estado=='Resuelto'}">selected="selected"</c:if> >Resuelto</option>
 						                          
                                                                         </select>
 					                          </p>
@@ -242,7 +242,7 @@ function valida(F) {
 						                    <td colspan="3">
 						                      <p>
 						                        <label for="txtDescrip"></label>
-                                                                        <textarea cols="50" rows="2"  name="txtDescrip" id="txtDescrip"></textarea>
+                                                                        <textarea cols="45" rows="2"  name="txtDescrip" id="txtDescrip"></textarea>
 					                          </p>
 					                     </td>
 					                      </tr>

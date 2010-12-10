@@ -193,7 +193,7 @@ function valida(F) {
 						                    <td colspan="3">
 						                      <p>
 						                        <label for="txtDescrip"></label>
-                                                <textarea name="txtDescrip" id="txtDescrip"></textarea>
+                                                <textarea cols="45" rows="2" name="txtDescrip" id="txtDescrip"></textarea>
                                                                       </p>
 
 					                      </td>
@@ -205,8 +205,8 @@ function valida(F) {
 						                       
                                                                               <select name="cmdConfirmar" id="cmdConfirmar" <c:if test="${ticket.estado!='Resuelto'}">disabled="disabled"</c:if> >
                                                                                   
-                                                                            <option  value="0" >Aceptar</option>
-                                                                            <option  value="1" >Rechazar</option>
+                                                                            <option  value="Aceptar" >Aceptar</option>
+                                                                            <option  value="Rechazar" >Rechazar</option>
                                                                             
                                                                         </select>
 					                          </p>

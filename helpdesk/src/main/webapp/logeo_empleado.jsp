@@ -118,7 +118,9 @@ function valida(F) {
 							              <td width="66"  id="letrasTablas"><input name="cmdIngreso" type="submit" id="cmdIngreso" value="Iniciar Sesion" /></td>
 							              <td width="30">&nbsp;</td>
                                                                       <td width="66"><input name="cmdCancelar" type="reset" id="cmdCancelar" onclick='clearValues();' value="Limpiar" /></td>
+                                                                      
 						                </tr>
+                                                                      <tr>${mensaje}</tr>
 						              </table>
                                                        </form>
                                                     							        
